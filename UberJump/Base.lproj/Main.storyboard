@@ -43,6 +43,9 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="vungleClick:" destination="LVB-YS-i5n" eventType="touchUpInside" id="Ll3-vH-oHl"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jwc-Lq-AcR">
                                         <rect key="frame" x="0.0" y="329" width="100" height="63"/>
@@ -55,6 +58,9 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="AdMobClick:" destination="LVB-YS-i5n" eventType="touchUpInside" id="Yx5-Qg-MxS"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Igl-d8-Lfi">
                                         <rect key="frame" x="500" y="329" width="100" height="63"/>
@@ -67,18 +73,9 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghg-zX-b88">
-                                        <rect key="frame" x="450" y="33" width="150" height="63"/>
-                                        <color key="backgroundColor" red="0.7522713652496571" green="0.26315470212228143" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="63" id="332-1D-eCp"/>
-                                            <constraint firstAttribute="width" constant="150" id="ZCI-D2-PxF"/>
-                                        </constraints>
-                                        <state key="normal" title="MBCore 2">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
+                                        <connections>
+                                            <action selector="adColonyClick:" destination="LVB-YS-i5n" eventType="touchUpInside" id="CZ8-3m-lLp"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RdF-b4-fdJ">
                                         <rect key="frame" x="0.0" y="33" width="150" height="63"/>
@@ -119,6 +116,21 @@
                                         </state>
                                         <connections>
                                             <action selector="closeСlick:" destination="LVB-YS-i5n" eventType="touchUpInside" id="1UU-VT-hsi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghg-zX-b88">
+                                        <rect key="frame" x="450" y="33" width="150" height="63"/>
+                                        <color key="backgroundColor" red="0.7522713652496571" green="0.26315470212228143" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="63" id="332-1D-eCp"/>
+                                            <constraint firstAttribute="width" constant="150" id="ZCI-D2-PxF"/>
+                                        </constraints>
+                                        <state key="normal" title="MBCore 2">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="mobileCore2Click:" destination="LVB-YS-i5n" eventType="touchUpInside" id="ecg-Hp-Ifl"/>
                                         </connections>
                                     </button>
                                 </subviews>

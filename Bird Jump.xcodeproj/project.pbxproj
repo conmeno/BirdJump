@@ -62,6 +62,11 @@
 		1103F4FC1A8259E100B7B604 /* Level01.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1103F4FB1A8259E100B7B604 /* Level01.plist */; };
 		1103F4FE1A82618C00B7B604 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1103F4FD1A82618C00B7B604 /* GameState.swift */; };
 		1103F5001A82686D00B7B604 /* EndGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1103F4FF1A82686D00B7B604 /* EndGameScene.swift */; };
+		843883CC1B89AFF100EBCDC1 /* 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 843883C81B89AFF000EBCDC1 /* 1.mp3 */; };
+		843883CD1B89AFF100EBCDC1 /* 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 843883C91B89AFF000EBCDC1 /* 2.mp3 */; };
+		843883CE1B89AFF100EBCDC1 /* 3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 843883CA1B89AFF000EBCDC1 /* 3.mp3 */; };
+		843883CF1B89AFF100EBCDC1 /* 4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 843883CB1B89AFF000EBCDC1 /* 4.mp3 */; };
+		843883D11B89C9FE00EBCDC1 /* RevMobAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843883D01B89C9FE00EBCDC1 /* RevMobAds.framework */; };
 		84A6B3A21B86CA8C00426D60 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3A11B86CA8C00426D60 /* AdSupport.framework */; };
 		84A6B3A41B86CA9600426D60 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3A31B86CA9600426D60 /* WebKit.framework */; };
 		84A6B3A61B86CA9C00426D60 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3A51B86CA9C00426D60 /* StoreKit.framework */; };
@@ -169,6 +174,11 @@
 		1103F4FB1A8259E100B7B604 /* Level01.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Level01.plist; sourceTree = "<group>"; };
 		1103F4FD1A82618C00B7B604 /* GameState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		1103F4FF1A82686D00B7B604 /* EndGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndGameScene.swift; sourceTree = "<group>"; };
+		843883C81B89AFF000EBCDC1 /* 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1.mp3; sourceTree = "<group>"; };
+		843883C91B89AFF000EBCDC1 /* 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 2.mp3; sourceTree = "<group>"; };
+		843883CA1B89AFF000EBCDC1 /* 3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 3.mp3; sourceTree = "<group>"; };
+		843883CB1B89AFF000EBCDC1 /* 4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 4.mp3; sourceTree = "<group>"; };
+		843883D01B89C9FE00EBCDC1 /* RevMobAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RevMobAds.framework; sourceTree = "<group>"; };
 		84A6B3A11B86CA8C00426D60 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		84A6B3A31B86CA9600426D60 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		84A6B3A51B86CA9C00426D60 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -226,6 +236,7 @@
 				84A6B3BA1B86CAFF00426D60 /* MessageUI.framework in Frameworks */,
 				84A6B3B81B86CAFA00426D60 /* QuartzCore.framework in Frameworks */,
 				84A6B3B61B86CAF500426D60 /* Security.framework in Frameworks */,
+				843883D11B89C9FE00EBCDC1 /* RevMobAds.framework in Frameworks */,
 				84A6B3B41B86CAF100426D60 /* SystemConfiguration.framework in Frameworks */,
 				84A6B3B21B86CAD100426D60 /* CoreGraphics.framework in Frameworks */,
 				84A6B3B01B86CACB00426D60 /* UIKit.framework in Frameworks */,
@@ -318,6 +329,10 @@
 		1103F4791A82472600B7B604 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				843883C81B89AFF000EBCDC1 /* 1.mp3 */,
+				843883C91B89AFF000EBCDC1 /* 2.mp3 */,
+				843883CA1B89AFF000EBCDC1 /* 3.mp3 */,
+				843883CB1B89AFF000EBCDC1 /* 4.mp3 */,
 				1103F4FB1A8259E100B7B604 /* Level01.plist */,
 				1103F4F91A82573100B7B604 /* StarPing.wav */,
 				1103F49F1A82484F00B7B604 /* UberJumpGraphics */,
@@ -404,6 +419,7 @@
 		84A8EAE21B85CD8100051E45 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				843883D01B89C9FE00EBCDC1 /* RevMobAds.framework */,
 				84A8EAEC1B85CE8000051E45 /* VungleSDK.embeddedframework */,
 				84A8EAEA1B85CE3400051E45 /* AdColony.framework */,
 				84A8EAE71B85CDFD00051E45 /* Chartboost.framework */,
@@ -521,12 +537,14 @@
 				84A8EAF51B85CE8000051E45 /* __vungle.db in Resources */,
 				1103F4CE1A82484F00B7B604 /* Background01.png in Resources */,
 				1103F48A1A82472600B7B604 /* LaunchScreen.xib in Resources */,
+				843883CD1B89AFF100EBCDC1 /* 2.mp3 in Resources */,
 				1103F4E61A82484F00B7B604 /* Background13.png in Resources */,
 				1103F4DC1A82484F00B7B604 /* Background08.png in Resources */,
 				1103F4D11A82484F00B7B604 /* Background02@2x.png in Resources */,
 				1103F4D41A82484F00B7B604 /* Background04.png in Resources */,
 				1103F4E41A82484F00B7B604 /* Background12.png in Resources */,
 				1103F4E81A82484F00B7B604 /* Background14.png in Resources */,
+				843883CE1B89AFF100EBCDC1 /* 3.mp3 in Resources */,
 				1103F4F11A82484F00B7B604 /* Background18@2x.png in Resources */,
 				1103F4F61A82484F00B7B604 /* Background@2x.png in Resources */,
 				1103F4E71A82484F00B7B604 /* Background13@2x.png in Resources */,
@@ -537,6 +555,7 @@
 				1103F4DD1A82484F00B7B604 /* Background08@2x.png in Resources */,
 				1103F4DF1A82484F00B7B604 /* Background09@2x.png in Resources */,
 				1103F4CF1A82484F00B7B604 /* Background01@2x.png in Resources */,
+				843883CF1B89AFF100EBCDC1 /* 4.mp3 in Resources */,
 				1103F4FA1A82573100B7B604 /* StarPing.wav in Resources */,
 				1103F4D91A82484F00B7B604 /* Background06@2x.png in Resources */,
 				84A8EAFA1B85CE8000051E45 /* vg_privacy.png in Resources */,
@@ -560,6 +579,7 @@
 				1103F4F51A82484F00B7B604 /* Background20@2x.png in Resources */,
 				1103F4F01A82484F00B7B604 /* Background18.png in Resources */,
 				1103F4CD1A82484F00B7B604 /* Background.png in Resources */,
+				843883CC1B89AFF100EBCDC1 /* 1.mp3 in Resources */,
 				1103F4D01A82484F00B7B604 /* Background02.png in Resources */,
 				1103F4E51A82484F00B7B604 /* Background12@2x.png in Resources */,
 				1103F4E91A82484F00B7B604 /* Background14@2x.png in Resources */,

@@ -36,7 +36,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate,ChartboostDelegate {
             [NSNumber (unsignedInt: AD_UNIT_ALL_UNITS.value)])
 
         
+       
         
+       
         return true
     }
 

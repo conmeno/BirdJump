@@ -9,6 +9,8 @@
 import UIKit
 import SpriteKit
 import GoogleMobileAds
+//import AVFoundation
+
 
 class GameViewController: UIViewController, VungleSDKDelegate, GADBannerViewDelegate  {
 
@@ -22,14 +24,37 @@ class GameViewController: UIViewController, VungleSDKDelegate, GADBannerViewDele
     
     
     @IBOutlet weak var adView: UIView!
-    
+//    var audioPlayer: AVAudioPlayer?
+//    
+//    func RandomThemeMusic(Mp3Name : String)
+//    {
+//        audioPlayer?.stop()
+//        
+//        
+//        let url = NSURL.fileURLWithPath(
+//            NSBundle.mainBundle().pathForResource(Mp3Name,
+//                ofType: "mp3")!)
+//        
+//        var error: NSError?
+//        
+//        audioPlayer = AVAudioPlayer(contentsOfURL: url, error: &error)
+//        
+//        if let err = error {
+//            println("audioPlayer error \(err.localizedDescription)")
+//        } else {
+//            
+//            audioPlayer?.prepareToPlay()
+//        }
+//        audioPlayer?.numberOfLoops = 100
+//        
+//    }
     
     @IBAction func SettingClick(sender: AnyObject) {
-        adView.hidden = false
-    }
+        var barsLink : String = "itms-apps://itunes.apple.com/ca/artist/phuong-nguyen/id1004963752"
+        UIApplication.sharedApplication().openURL(NSURL(string: barsLink)!)    }
     
     @IBAction func MoreAppDrag(sender: AnyObject) {
-        
+         adView.hidden = false
         
     }
     
@@ -51,9 +76,27 @@ class GameViewController: UIViewController, VungleSDKDelegate, GADBannerViewDele
     }
     
     @IBAction func mobileCoreFullClick(sender: AnyObject){
-       showAds()
+       showMobilecore()
     
     }
+    
+    @IBAction func mobileCore2Click(sender: AnyObject) {
+    }
+    
+    @IBAction func adColonyClick(sender: AnyObject) {
+        showAdcolony()
+    }
+    
+    
+    @IBAction func vungleClick(sender: AnyObject) {
+        showVungle()
+    }
+    
+    
+    @IBAction func AdMobClick(sender: AnyObject) {
+        showAdmob()
+    }
+    
     
     var interstitial: GADInterstitial!
     
@@ -131,16 +174,8 @@ class GameViewController: UIViewController, VungleSDKDelegate, GADBannerViewDele
         super.viewDidLoad()
         adView.hidden = true
         
-        let testFrame : CGRect = CGRectMake(0,0,320,200)
-        var testView : UIView = UIView(frame: testFrame)
-        testView.backgroundColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1.0)
-        testView.alpha=0.5
-        self.view.addSubview(testView)
-        
-        
-        //var myV = UIView(frame: CGRectMake(0, 20, 320, 350))
-        //self.view.addSubview(myV)
-
+       // RandomThemeMusic("1")
+//audioPlayer?.play()
         let skView = view as SKView//(frame: CGRectMake(0, 50, self.view.bounds.width, self.view.bounds.height))
        
         //skView.showsFPS = true
@@ -167,6 +202,10 @@ class GameViewController: UIViewController, VungleSDKDelegate, GADBannerViewDele
         
         showMobilecore2()
         
+        
+        RevMobAds.startSessionWithAppID("55d9875a2c3f445b0c14893a",
+            withSuccessHandler: nil, andFailHandler: nil)
+         RevMobAds.session()?.showBanner()
         
     }
 

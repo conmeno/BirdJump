@@ -8,6 +8,8 @@
 
 import SpriteKit
 import CoreMotion
+import AVFoundation
+
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     let backgroundNode = SKNode()
@@ -30,10 +32,38 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var lblStars: SKLabelNode!
     
     var gameOver = false
+    
+    var audioPlayer: AVAudioPlayer?
+    
+    func RandomThemeMusic(Mp3Name : String)
+    {
+        audioPlayer?.stop()
+        
+        let url = NSURL.fileURLWithPath(
+            NSBundle.mainBundle().pathForResource(Mp3Name,
+                ofType: "mp3")!)
+        
+        var error: NSError?
+        
+        audioPlayer = AVAudioPlayer(contentsOfURL: url, error: &error)
+        
+        if let err = error {
+            println("audioPlayer error \(err.localizedDescription)")
+        } else {
+            
+            audioPlayer?.prepareToPlay()
+        }
+        audioPlayer?.play()
+        audioPlayer?.numberOfLoops = 100
+        
+    }
+
+    
 
     override init(size: CGSize) {
          
         super.init(size: size)
+        
         
         backgroundColor = SKColor.whiteColor()
         scaleFactor = size.width / 320.0
@@ -169,6 +199,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         tapToStart.removeFromParent()
         player.physicsBody!.dynamic = true
         player.physicsBody!.applyImpulse(CGVector(dx: 0, dy: 20))
+        RandomThemeMusic("2")
     }
     
     func createMidgroundNode() -> SKNode {
