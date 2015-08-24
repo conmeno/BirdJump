@@ -10,31 +10,32 @@ import UIKit
 import SpriteKit
 import iAd
 
-//import AVFoundation
-
-
-class GameViewController: UIViewController  {
-
-  
-     @IBAction func SettingClick(sender: AnyObject) {
-        var barsLink : String = "itms-apps://itunes.apple.com/ca/artist/phuong-nguyen/id1004963752"
-        UIApplication.sharedApplication().openURL(NSURL(string: barsLink)!)    }
-    
-    @IBAction func MoreAppDrag(sender: AnyObject) {
-                
-    }
-    
-    
+class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let skView = view as SKView
+        //skView.showsFPS = true
+        //skView.showsNodeCount = true
+        
+        
+        let scene = GameScene(size: skView.bounds.size)
+        scene.scaleMode = .AspectFill
+        
+        skView.presentScene(scene)
         self.canDisplayBannerAds = true
     }
-
+    
     override func shouldAutorotate() -> Bool {
         return true
     }
-
+    
+    @IBAction func MoreAppClick(sender: AnyObject) {
+        var barsLink : String = "itms-apps://itunes.apple.com/ca/artist/phuong-thanh-nguyen/id1019089261"
+        UIApplication.sharedApplication().openURL(NSURL(string: barsLink)!)
+    }
+    
     override func supportedInterfaceOrientations() -> Int {
         if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
             return Int(UIInterfaceOrientationMask.AllButUpsideDown.rawValue)
@@ -42,14 +43,13 @@ class GameViewController: UIViewController  {
             return Int(UIInterfaceOrientationMask.All.rawValue)
         }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.
     }
-
+    
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
-    
-   }
+}

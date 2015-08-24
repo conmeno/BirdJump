@@ -137,13 +137,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         hudNode.addChild(tapToStart)
         
         let star = SKSpriteNode(imageNamed: "Star")
-        star.position = CGPoint(x: 25, y: size.height - 70)
+        star.position = CGPoint(x: 25, y: size.height - 40)
         hudNode.addChild(star)
         
         lblStars = SKLabelNode(fontNamed: "ChalkboardSE-Bold")
         lblStars.fontSize = 30
         lblStars.fontColor = SKColor.whiteColor()
-        lblStars.position = CGPoint(x: 50, y: size.height - 80)
+        lblStars.position = CGPoint(x: 50, y: size.height - 50)
         lblStars.horizontalAlignmentMode = .Left
         lblStars.text = String(format: "X %d", GameState.sharedInstance.stars)
         hudNode.addChild(lblStars)
@@ -151,7 +151,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         lblScore = SKLabelNode(fontNamed: "ChalkboardSE-Bold")
         lblScore.fontSize = 30
         lblScore.fontColor = SKColor.whiteColor()
-        lblScore.position = CGPoint(x: size.width - 20, y: size.height - 80)
+        lblScore.position = CGPoint(x: size.width - 20, y: size.height - 50)
         lblScore.horizontalAlignmentMode = .Right
         lblScore.text = "0"
         hudNode.addChild(lblScore)

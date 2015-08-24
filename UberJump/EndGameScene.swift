@@ -13,13 +13,13 @@ class EndGameScene: SKScene {
         super.init(size: size)
         
         let star = SKSpriteNode(imageNamed: "Star")
-        star.position = CGPoint(x: 25, y: self.size.height-70)
+        star.position = CGPoint(x: 25, y: self.size.height-40)
         addChild(star)
         
         let lblStars = SKLabelNode(fontNamed: "ChalkboardSE-Bold")
         lblStars.fontSize = 30
         lblStars.fontColor = SKColor.whiteColor()
-        lblStars.position = CGPoint(x: 50, y: self.size.height-80)
+        lblStars.position = CGPoint(x: 50, y: self.size.height-50)
         lblStars.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.Left
         lblStars.text = String(format: "X %d", GameState.sharedInstance.stars)
         addChild(lblStars)

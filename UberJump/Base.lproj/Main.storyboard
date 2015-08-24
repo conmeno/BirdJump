@@ -30,6 +30,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="MoreAppClick:" destination="LVB-YS-i5n" eventType="touchUpInside" id="fgX-ae-CnR"/>
                                     <action selector="MoreAppDrag:" destination="LVB-YS-i5n" eventType="touchDragOutside" id="pjK-d0-JPx"/>
                                     <action selector="SettingClick:" destination="LVB-YS-i5n" eventType="touchUpInside" id="uiG-f7-HVz"/>
                                 </connections>
