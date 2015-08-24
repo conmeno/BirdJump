@@ -17,6 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate,ChartboostDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        RevMobAds.startSessionWithAppID("55d9875a2c3f445b0c14893a",
+            withSuccessHandler: nil, andFailHandler: nil)
+
+        
         Chartboost.startWithAppId("55d6ca82c909a6085e4a0176", appSignature: "bb733356ff38c9c48311d9d881844b73cd7085c5", delegate: self)
         
         //vungle

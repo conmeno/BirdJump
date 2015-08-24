@@ -155,8 +155,12 @@ class GameViewController: UIViewController, VungleSDKDelegate, GADBannerViewDele
         bannerView?.rootViewController = self
         self.view.addSubview(bannerView!)
         //adViewHeight = bannerView!.frame.size.height
-        bannerView?.loadRequest(GADRequest())
+        var request = GADRequest()
+        request.testDevices = ["0eec85050e4b8ded7df16d107d516267"];
+        bannerView?.loadRequest(request)
+        //bannerView?.loadRequest(GADRequest())
         bannerView?.hidden = true
+         
     }
     func timerMethodAutoAd(timer:NSTimer) {
         println("auto play")
@@ -203,9 +207,7 @@ class GameViewController: UIViewController, VungleSDKDelegate, GADBannerViewDele
         showMobilecore2()
         
         
-        RevMobAds.startSessionWithAppID("55d9875a2c3f445b0c14893a",
-            withSuccessHandler: nil, andFailHandler: nil)
-         RevMobAds.session()?.showBanner()
+                RevMobAds.session()?.showBanner()
         
     }
 
