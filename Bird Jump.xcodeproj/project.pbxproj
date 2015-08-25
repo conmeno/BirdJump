@@ -62,10 +62,7 @@
 		1103F4FC1A8259E100B7B604 /* Level01.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1103F4FB1A8259E100B7B604 /* Level01.plist */; };
 		1103F4FE1A82618C00B7B604 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1103F4FD1A82618C00B7B604 /* GameState.swift */; };
 		1103F5001A82686D00B7B604 /* EndGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1103F4FF1A82686D00B7B604 /* EndGameScene.swift */; };
-		843883CC1B89AFF100EBCDC1 /* 1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 843883C81B89AFF000EBCDC1 /* 1.mp3 */; };
 		843883CD1B89AFF100EBCDC1 /* 2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 843883C91B89AFF000EBCDC1 /* 2.mp3 */; };
-		843883CE1B89AFF100EBCDC1 /* 3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 843883CA1B89AFF000EBCDC1 /* 3.mp3 */; };
-		843883CF1B89AFF100EBCDC1 /* 4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 843883CB1B89AFF000EBCDC1 /* 4.mp3 */; };
 		843883D31B89E50900EBCDC1 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 843883D21B89E50900EBCDC1 /* iAd.framework */; };
 /* End PBXBuildFile section */
 
@@ -139,10 +136,7 @@
 		1103F4FB1A8259E100B7B604 /* Level01.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Level01.plist; sourceTree = "<group>"; };
 		1103F4FD1A82618C00B7B604 /* GameState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		1103F4FF1A82686D00B7B604 /* EndGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndGameScene.swift; sourceTree = "<group>"; };
-		843883C81B89AFF000EBCDC1 /* 1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 1.mp3; sourceTree = "<group>"; };
 		843883C91B89AFF000EBCDC1 /* 2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 2.mp3; sourceTree = "<group>"; };
-		843883CA1B89AFF000EBCDC1 /* 3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 3.mp3; sourceTree = "<group>"; };
-		843883CB1B89AFF000EBCDC1 /* 4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 4.mp3; sourceTree = "<group>"; };
 		843883D21B89E50900EBCDC1 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -204,10 +198,7 @@
 		1103F4791A82472600B7B604 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				843883C81B89AFF000EBCDC1 /* 1.mp3 */,
 				843883C91B89AFF000EBCDC1 /* 2.mp3 */,
-				843883CA1B89AFF000EBCDC1 /* 3.mp3 */,
-				843883CB1B89AFF000EBCDC1 /* 4.mp3 */,
 				1103F4FB1A8259E100B7B604 /* Level01.plist */,
 				1103F4F91A82573100B7B604 /* StarPing.wav */,
 				1103F49F1A82484F00B7B604 /* UberJumpGraphics */,
@@ -382,7 +373,6 @@
 				1103F4D41A82484F00B7B604 /* Background04.png in Resources */,
 				1103F4E41A82484F00B7B604 /* Background12.png in Resources */,
 				1103F4E81A82484F00B7B604 /* Background14.png in Resources */,
-				843883CE1B89AFF100EBCDC1 /* 3.mp3 in Resources */,
 				1103F4F11A82484F00B7B604 /* Background18@2x.png in Resources */,
 				1103F4F61A82484F00B7B604 /* Background@2x.png in Resources */,
 				1103F4E71A82484F00B7B604 /* Background13@2x.png in Resources */,
@@ -393,7 +383,6 @@
 				1103F4DD1A82484F00B7B604 /* Background08@2x.png in Resources */,
 				1103F4DF1A82484F00B7B604 /* Background09@2x.png in Resources */,
 				1103F4CF1A82484F00B7B604 /* Background01@2x.png in Resources */,
-				843883CF1B89AFF100EBCDC1 /* 4.mp3 in Resources */,
 				1103F4FA1A82573100B7B604 /* StarPing.wav in Resources */,
 				1103F4D91A82484F00B7B604 /* Background06@2x.png in Resources */,
 				1103F4E01A82484F00B7B604 /* Background10.png in Resources */,
@@ -413,7 +402,6 @@
 				1103F4F51A82484F00B7B604 /* Background20@2x.png in Resources */,
 				1103F4F01A82484F00B7B604 /* Background18.png in Resources */,
 				1103F4CD1A82484F00B7B604 /* Background.png in Resources */,
-				843883CC1B89AFF100EBCDC1 /* 1.mp3 in Resources */,
 				1103F4D01A82484F00B7B604 /* Background02.png in Resources */,
 				1103F4E51A82484F00B7B604 /* Background12@2x.png in Resources */,
 				1103F4E91A82484F00B7B604 /* Background14@2x.png in Resources */,
@@ -575,7 +563,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/VungleSDK.embeddedframework",
 				);
 				INFOPLIST_FILE = UberJump/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -597,7 +584,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/VungleSDK.embeddedframework",
 				);
 				INFOPLIST_FILE = UberJump/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -622,6 +608,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = UberJumpTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "Bird JumpTests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bird Jump.app/Bird Jump";
@@ -637,6 +624,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = UberJumpTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "Bird JumpTests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bird Jump.app/Bird Jump";

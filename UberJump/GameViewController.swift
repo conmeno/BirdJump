@@ -14,7 +14,7 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         let skView = view as SKView
         //skView.showsFPS = true
         //skView.showsNodeCount = true
@@ -24,7 +24,7 @@ class GameViewController: UIViewController {
         scene.scaleMode = .AspectFill
         
         skView.presentScene(scene)
-        self.canDisplayBannerAds = true
+            self.canDisplayBannerAds = true
     }
     
     override func shouldAutorotate() -> Bool {
