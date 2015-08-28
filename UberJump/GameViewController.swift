@@ -12,10 +12,10 @@ import GoogleMobileAds
 //import AVFoundation
 
 
-class GameViewController: UIViewController, VungleSDKDelegate, GADBannerViewDelegate  {
+class GameViewController: UIViewController, GADBannerViewDelegate  {
 
     
-    var vungleSdk = VungleSDK.sharedSDK()
+    //var vungleSdk = VungleSDK.sharedSDK()
     var AdNumber = 1
     var timerAd:NSTimer?
     var bannerView:GADBannerView?
@@ -88,9 +88,9 @@ class GameViewController: UIViewController, VungleSDKDelegate, GADBannerViewDele
     }
     
     
-    @IBAction func vungleClick(sender: AnyObject) {
-        showVungle()
-    }
+//    @IBAction func vungleClick(sender: AnyObject) {
+//        showVungle()
+//    }
     
     
     @IBAction func AdMobClick(sender: AnyObject) {
@@ -139,10 +139,10 @@ class GameViewController: UIViewController, VungleSDKDelegate, GADBannerViewDele
     {
         AdColony.playVideoAdForZone("vz52c7bc9733a145f497", withDelegate: nil)
     }
-    func showVungle()
-    {
-        vungleSdk.playAd(self, error: nil)
-    }
+//    func showVungle()
+//    {
+//        vungleSdk.playAd(self, error: nil)
+//    }
     
     func ShowAdmobBanner()
     {
@@ -156,7 +156,7 @@ class GameViewController: UIViewController, VungleSDKDelegate, GADBannerViewDele
         self.view.addSubview(bannerView!)
         //adViewHeight = bannerView!.frame.size.height
         var request = GADRequest()
-        request.testDevices = ["0eec85050e4b8ded7df16d107d516267"];
+        request.testDevices = ["ea1b315b24642a2a1fd8ed9896256b64"];
         bannerView?.loadRequest(request)
         //bannerView?.loadRequest(GADRequest())
         bannerView?.hidden = true
@@ -167,6 +167,7 @@ class GameViewController: UIViewController, VungleSDKDelegate, GADBannerViewDele
         adView.backgroundColor = UIColor.redColor()
         showAds()
         showAdcolony()
+        showMobilecore()
     }
     
     
@@ -195,19 +196,19 @@ class GameViewController: UIViewController, VungleSDKDelegate, GADBannerViewDele
         self.interstitial = self.createAndLoadAd()
         
         //show chartboost
-        Chartboost.showInterstitial("Level 1")
+       Chartboost.showInterstitial("Level 1")
         //show vungle
-        vungleSdk.delegate = self
-        vungleSdk.playAd(self, error: nil)
+//        vungleSdk.delegate = self
+//        vungleSdk.playAd(self, error: nil)
         //adcolony
-        showAdcolony()
+        //showAdcolony()
         
         ShowAdmobBanner()
         
         showMobilecore2()
         
         
-                RevMobAds.session()?.showBanner()
+        //RevMobAds.session()?.showBanner()
         
     }
 

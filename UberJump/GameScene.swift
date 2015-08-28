@@ -199,7 +199,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         tapToStart.removeFromParent()
         player.physicsBody!.dynamic = true
         player.physicsBody!.applyImpulse(CGVector(dx: 0, dy: 20))
-        RandomThemeMusic("2")
+        RandomThemeMusic("3")
     }
     
     func createMidgroundNode() -> SKNode {
