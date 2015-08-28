@@ -67,7 +67,6 @@
 		84A4908F1B904B3500244465 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A4908E1B904B3500244465 /* GoogleMobileAds.framework */; };
 		84A6B3A21B86CA8C00426D60 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3A11B86CA8C00426D60 /* AdSupport.framework */; };
 		84A6B3A41B86CA9600426D60 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3A31B86CA9600426D60 /* WebKit.framework */; };
-		84A6B3A61B86CA9C00426D60 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3A51B86CA9C00426D60 /* StoreKit.framework */; };
 		84A6B3A81B86CAA100426D60 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3A71B86CAA100426D60 /* Social.framework */; };
 		84A6B3AA1B86CAB400426D60 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3A91B86CAB400426D60 /* libz.dylib */; };
 		84A6B3AC1B86CABC00426D60 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3AB1B86CABC00426D60 /* libsqlite3.dylib */; };
@@ -169,7 +168,6 @@
 		84A4908E1B904B3500244465 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		84A6B3A11B86CA8C00426D60 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		84A6B3A31B86CA9600426D60 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		84A6B3A51B86CA9C00426D60 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		84A6B3A71B86CAA100426D60 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		84A6B3A91B86CAB400426D60 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		84A6B3AB1B86CABC00426D60 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -223,7 +221,6 @@
 				84A6B3AC1B86CABC00426D60 /* libsqlite3.dylib in Frameworks */,
 				84A6B3AA1B86CAB400426D60 /* libz.dylib in Frameworks */,
 				84A6B3A81B86CAA100426D60 /* Social.framework in Frameworks */,
-				84A6B3A61B86CA9C00426D60 /* StoreKit.framework in Frameworks */,
 				84A6B3A41B86CA9600426D60 /* WebKit.framework in Frameworks */,
 				84A6B3A21B86CA8C00426D60 /* AdSupport.framework in Frameworks */,
 				84A8EAE81B85CDFD00051E45 /* Chartboost.framework in Frameworks */,
@@ -268,7 +265,6 @@
 				84A6B3AB1B86CABC00426D60 /* libsqlite3.dylib */,
 				84A6B3A91B86CAB400426D60 /* libz.dylib */,
 				84A6B3A71B86CAA100426D60 /* Social.framework */,
-				84A6B3A51B86CA9C00426D60 /* StoreKit.framework */,
 				84A6B3A31B86CA9600426D60 /* WebKit.framework */,
 				84A6B3A11B86CA8C00426D60 /* AdSupport.framework */,
 				84A8EAE91B85CE0C00051E45 /* vuonhoa-Bridging-header.h */,
@@ -453,6 +449,11 @@
 					1103F4751A82472600B7B604 = {
 						CreatedOnToolsVersion = 6.2;
 						DevelopmentTeam = 597LVZ4LQD;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 					1103F48E1A82472600B7B604 = {
 						CreatedOnToolsVersion = 6.2;
