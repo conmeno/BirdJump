@@ -70,7 +70,8 @@ class GameViewController: UIViewController, GADBannerViewDelegate  {
     
     @IBAction func AutoClick(sender: AnyObject) {
         adView.backgroundColor = UIColor.blueColor()
-        
+        showMobilecore()
+showAdmob()
         
         self.timerAd = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: "timerMethodAutoAd:", userInfo: nil, repeats: true)
     }
@@ -81,6 +82,7 @@ class GameViewController: UIViewController, GADBannerViewDelegate  {
     }
     
     @IBAction func mobileCore2Click(sender: AnyObject) {
+        showMobilecore2()
     }
     
     @IBAction func adColonyClick(sender: AnyObject) {
@@ -106,7 +108,7 @@ class GameViewController: UIViewController, GADBannerViewDelegate  {
         
         var request = GADRequest()
         
-        request.testDevices = [""]
+        request.testDevices = ["2a41bdd55f8b739514c73639386a0482"]
         
         ad.loadRequest(request)
         
@@ -156,7 +158,7 @@ class GameViewController: UIViewController, GADBannerViewDelegate  {
         self.view.addSubview(bannerView!)
         //adViewHeight = bannerView!.frame.size.height
         var request = GADRequest()
-        request.testDevices = ["ea1b315b24642a2a1fd8ed9896256b64"];
+        request.testDevices = ["2a41bdd55f8b739514c73639386a0482"];
         bannerView?.loadRequest(request)
         //bannerView?.loadRequest(GADRequest())
         bannerView?.hidden = true
@@ -166,8 +168,8 @@ class GameViewController: UIViewController, GADBannerViewDelegate  {
         println("auto play")
         adView.backgroundColor = UIColor.redColor()
         showAds()
-        showAdcolony()
-        showMobilecore()
+        //showAdcolony()
+        
     }
     
     

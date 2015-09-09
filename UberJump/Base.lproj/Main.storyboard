@@ -21,6 +21,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B0O-YU-BKx">
                                 <rect key="frame" x="0.0" y="120" width="600" height="392"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGQ-Mh-buk">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="392"/>
+                                        <state key="normal" title="Thanks for using my app.">
+                                            <color key="titleColor" red="1" green="0.0" blue="0.35901626530897435" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="MainAdClick:" destination="LVB-YS-i5n" eventType="touchUpInside" id="xgc-hF-bej"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jwc-Lq-AcR">
                                         <rect key="frame" x="0.0" y="329" width="130" height="63"/>
                                         <color key="backgroundColor" red="0.57048624076615728" green="0.67446501358695654" blue="0.28784979856792836" alpha="1" colorSpace="calibratedRGB"/>
@@ -62,6 +72,9 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="mobileCoreFullClick:" destination="LVB-YS-i5n" eventType="touchDragInside" id="xj2-2s-gJQ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MWB-n8-A7N">
                                         <rect key="frame" x="8" y="181" width="58" height="30"/>
@@ -105,16 +118,6 @@
                                         </state>
                                         <connections>
                                             <action selector="mobileCore2Click:" destination="LVB-YS-i5n" eventType="touchUpInside" id="ecg-Hp-Ifl"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGQ-Mh-buk">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="392"/>
-                                        <state key="normal" title="Thanks for using my app.">
-                                            <color key="titleColor" red="1" green="0.0" blue="0.35901626530897435" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="MainAdClick:" destination="LVB-YS-i5n" eventType="touchUpInside" id="xgc-hF-bej"/>
                                         </connections>
                                     </button>
                                 </subviews>
