@@ -105,7 +105,7 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
-      customArchiveName = "Lazy Bird Jump"
+      customArchiveName = "Baby Bird Jump"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>
