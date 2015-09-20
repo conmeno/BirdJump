@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,ChartboostDelegate {
         //   withSuccessHandler: nil, andFailHandler: nil)
 
         
-        Chartboost.startWithAppId("55d6ca82c909a6085e4a0176", appSignature: "bb733356ff38c9c48311d9d881844b73cd7085c5", delegate: self)
+        Chartboost.startWithAppId("55fe047304b0165bb5ed45f7", appSignature: "337b3553b5dac47a4c4a2b0c7d2720de3bf9d480", delegate: self)
         
         //vungle
         // Override point for customization after application launch.
