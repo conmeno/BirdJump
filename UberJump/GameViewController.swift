@@ -48,9 +48,9 @@ class GameViewController: UIViewController, GADBannerViewDelegate  {
 //        audioPlayer?.numberOfLoops = 100
 //        
 //    }
-    
+    //https://itunes.apple.com/us/developer/phuong-thanh-nguyen/id1019089261
     @IBAction func SettingClick(sender: AnyObject) {
-        var barsLink : String = "itms-apps://itunes.apple.com/ca/artist/phuong-nguyen/id1004963752"
+        var barsLink : String = "itms-apps://itunes.apple.com/developer/phuong-thanh-nguyen/id1019089261"
         UIApplication.sharedApplication().openURL(NSURL(string: barsLink)!)    }
     
     @IBAction func MoreAppDrag(sender: AnyObject) {
@@ -70,24 +70,24 @@ class GameViewController: UIViewController, GADBannerViewDelegate  {
     
     @IBAction func AutoClick(sender: AnyObject) {
         adView.backgroundColor = UIColor.blueColor()
-        showMobilecore()
+        //showMobilecore()
 showAdmob()
         
         self.timerAd = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: "timerMethodAutoAd:", userInfo: nil, repeats: true)
     }
     
-    @IBAction func mobileCoreFullClick(sender: AnyObject){
-       showMobilecore()
+//    @IBAction func mobileCoreFullClick(sender: AnyObject){
+//       showMobilecore()
+//    
+//    }
+//    
+//    @IBAction func mobileCore2Click(sender: AnyObject) {
+//        showMobilecore2()
+//    }
     
-    }
-    
-    @IBAction func mobileCore2Click(sender: AnyObject) {
-        showMobilecore2()
-    }
-    
-    @IBAction func adColonyClick(sender: AnyObject) {
-        showAdcolony()
-    }
+//    @IBAction func adColonyClick(sender: AnyObject) {
+//        showAdcolony()
+//    }
     
     
 //    @IBAction func vungleClick(sender: AnyObject) {
@@ -104,11 +104,11 @@ showAdmob()
     
     func createAndLoadAd() -> GADInterstitial
     {
-        var ad = GADInterstitial(adUnitID: "ca-app-pub-9535461294868148/4372006515")
+        var ad = GADInterstitial(adUnitID: "ca-app-pub-8023028585036345/7704907512")
         
         var request = GADRequest()
         
-        request.testDevices = ["2a41bdd55f8b739514c73639386a0482"]
+        request.testDevices = ["1fb61163457fdcd3702d747b1c36b3bc"]
         
         ad.loadRequest(request)
         
@@ -128,19 +128,19 @@ showAdmob()
         AdNumber++
         println(AdNumber)
     }
-    func showMobilecore()
-    {
-        
-        MobileCore.showInterstitialFromViewController(self, delegate: nil)
-    }
-    func showMobilecore2()
-    {
-        MobileCore.showStickeeFromViewController(self)
-    }
-    func showAdcolony()
-    {
-        AdColony.playVideoAdForZone("vz52c7bc9733a145f497", withDelegate: nil)
-    }
+//    func showMobilecore()
+//    {
+//        
+//        MobileCore.showInterstitialFromViewController(self, delegate: nil)
+//    }
+//    func showMobilecore2()
+//    {
+//        MobileCore.showStickeeFromViewController(self)
+//    }
+//    func showAdcolony()
+//    {
+//        AdColony.playVideoAdForZone("vz52c7bc9733a145f497", withDelegate: nil)
+//    }
 //    func showVungle()
 //    {
 //        vungleSdk.playAd(self, error: nil)
@@ -152,13 +152,13 @@ showAdmob()
         //}
         //self.view.bounds.height - 50
         bannerView = GADBannerView(frame: CGRectMake(0, 0 , 320, 50))
-        bannerView?.adUnitID = "ca-app-pub-9535461294868148/2895273314"
+        bannerView?.adUnitID = "ca-app-pub-8023028585036345/6228174316"
         bannerView?.delegate = self
         bannerView?.rootViewController = self
         self.view.addSubview(bannerView!)
         //adViewHeight = bannerView!.frame.size.height
         var request = GADRequest()
-        request.testDevices = ["2a41bdd55f8b739514c73639386a0482"];
+        request.testDevices = ["1fb61163457fdcd3702d747b1c36b3bc"];
         bannerView?.loadRequest(request)
         //bannerView?.loadRequest(GADRequest())
         bannerView?.hidden = true
@@ -207,7 +207,7 @@ showAdmob()
         
         ShowAdmobBanner()
         
-        showMobilecore2()
+        //showMobilecore2()
         
         
         //RevMobAds.session()?.showBanner()

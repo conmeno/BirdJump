@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,ChartboostDelegate {
         //   withSuccessHandler: nil, andFailHandler: nil)
 
         
-        Chartboost.startWithAppId("55fe047304b0165bb5ed45f7", appSignature: "337b3553b5dac47a4c4a2b0c7d2720de3bf9d480", delegate: self)
+        Chartboost.startWithAppId("55fe36ac04b0165a1d032420", appSignature: "8780c63a980553d931ae497b070bf1d4e2c16991", delegate: self)
         
         //vungle
         // Override point for customization after application launch.
@@ -33,12 +33,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate,ChartboostDelegate {
         
         //end vung le
         //adcolony\
-        AdColony.configureWithAppID("appf72e33325e794b9cb0", zoneIDs: ["vz52c7bc9733a145f497"], delegate: nil, logging: true)
+//        AdColony.configureWithAppID("appf72e33325e794b9cb0", zoneIDs: ["vz52c7bc9733a145f497"], delegate: nil, logging: true)
+//        
         
-        
-        MobileCore.initWithToken("3D2A61TO0BGWAT07RD8KE6PBLZK7S", logLevel: DEBUG_LOG_LEVEL, adUnits:
-            [NSNumber (unsignedInt: AD_UNIT_ALL_UNITS.value)])
-
+//        MobileCore.initWithToken("3D2A61TO0BGWAT07RD8KE6PBLZK7S", logLevel: DEBUG_LOG_LEVEL, adUnits:
+//            [NSNumber (unsignedInt: AD_UNIT_ALL_UNITS.value)])
+//
         
        
         

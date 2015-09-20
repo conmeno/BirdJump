@@ -88,9 +88,7 @@
 		84A6B3CC1B86CB3D00426D60 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3CA1B86CB3D00426D60 /* CoreMedia.framework */; };
 		84A6B3CF1B86CB4400426D60 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3CD1B86CB4400426D60 /* EventKit.framework */; };
 		84A6B3D01B86CB4400426D60 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3CE1B86CB4400426D60 /* EventKitUI.framework */; };
-		84A8EAE41B85CD8E00051E45 /* MobileCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A8EAE31B85CD8E00051E45 /* MobileCore.framework */; };
 		84A8EAE81B85CDFD00051E45 /* Chartboost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A8EAE71B85CDFD00051E45 /* Chartboost.framework */; };
-		84A8EAEB1B85CE3400051E45 /* AdColony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A8EAEA1B85CE3400051E45 /* AdColony.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -189,10 +187,8 @@
 		84A6B3CA1B86CB3D00426D60 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		84A6B3CD1B86CB4400426D60 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		84A6B3CE1B86CB4400426D60 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
-		84A8EAE31B85CD8E00051E45 /* MobileCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MobileCore.framework; sourceTree = "<group>"; };
 		84A8EAE71B85CDFD00051E45 /* Chartboost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Chartboost.framework; sourceTree = "<group>"; };
 		84A8EAE91B85CE0C00051E45 /* vuonhoa-Bridging-header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "vuonhoa-Bridging-header.h"; sourceTree = "<group>"; };
-		84A8EAEA1B85CE3400051E45 /* AdColony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdColony.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,9 +220,7 @@
 				84A6B3A41B86CA9600426D60 /* WebKit.framework in Frameworks */,
 				84A6B3A21B86CA8C00426D60 /* AdSupport.framework in Frameworks */,
 				84A8EAE81B85CDFD00051E45 /* Chartboost.framework in Frameworks */,
-				84A8EAE41B85CD8E00051E45 /* MobileCore.framework in Frameworks */,
 				84A4908F1B904B3500244465 /* GoogleMobileAds.framework in Frameworks */,
-				84A8EAEB1B85CE3400051E45 /* AdColony.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,9 +386,7 @@
 			isa = PBXGroup;
 			children = (
 				84A4908E1B904B3500244465 /* GoogleMobileAds.framework */,
-				84A8EAEA1B85CE3400051E45 /* AdColony.framework */,
 				84A8EAE71B85CDFD00051E45 /* Chartboost.framework */,
-				84A8EAE31B85CD8E00051E45 /* MobileCore.framework */,
 			);
 			name = Framework;
 			sourceTree = "<group>";
@@ -448,7 +440,7 @@
 				TargetAttributes = {
 					1103F4751A82472600B7B604 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 597LVZ4LQD;
+						DevelopmentTeam = 6SZC32EP3F;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 0;

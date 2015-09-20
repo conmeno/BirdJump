@@ -7,11 +7,10 @@
 //
 #import <Foundation/Foundation.h>
 #import <Chartboost/Chartboost.h>
-#import <AdColony/AdColony.h>
+
  
 #import <CommonCrypto/CommonDigest.h>
 #import <AdSupport/AdSupport.h>
-#import <MobileCore/MobileCore.h>
 //#import <RevMobAds/RevMobAds.h>
 #ifndef vuonhoaphatgiao_vuonhoa_Bridging_header_h
 #define vuonhoaphatgiao_vuonhoa_Bridging_header_h
