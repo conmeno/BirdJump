@@ -18,10 +18,11 @@ class GameViewController: UIViewController, GADBannerViewDelegate  {
     //var vungleSdk = VungleSDK.sharedSDK()
     var AdNumber = 1
     var timerAd:NSTimer?
-    var bannerView:GADBannerView?
+    var gBannerView:GADBannerView?
     
     
-    
+    var timerVPN:NSTimer?
+    var isStopAD = true
     
     @IBOutlet weak var adView: UIView!
 //    var audioPlayer: AVAudioPlayer?
@@ -70,23 +71,23 @@ class GameViewController: UIViewController, GADBannerViewDelegate  {
     
     @IBAction func AutoClick(sender: AnyObject) {
         adView.backgroundColor = UIColor.blueColor()
-        showMobilecore()
+       // showMobilecore()
 showAdmob()
         
         self.timerAd = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: "timerMethodAutoAd:", userInfo: nil, repeats: true)
     }
     
     @IBAction func mobileCoreFullClick(sender: AnyObject){
-       showMobilecore()
+       //showMobilecore()
     
     }
     
     @IBAction func mobileCore2Click(sender: AnyObject) {
-        showMobilecore2()
+       // showMobilecore2()
     }
     
     @IBAction func adColonyClick(sender: AnyObject) {
-        showAdcolony()
+       // showAdcolony()
     }
     
     
@@ -108,7 +109,7 @@ showAdmob()
         
         var request = GADRequest()
         
-        request.testDevices = ["2a41bdd55f8b739514c73639386a0482"]
+        request.testDevices = ["6f7979b13565c01567ad829eb0139f28"]
         
         ad.loadRequest(request)
         
@@ -128,19 +129,19 @@ showAdmob()
         AdNumber++
         println(AdNumber)
     }
-    func showMobilecore()
-    {
-        
-        MobileCore.showInterstitialFromViewController(self, delegate: nil)
-    }
-    func showMobilecore2()
-    {
-        MobileCore.showStickeeFromViewController(self)
-    }
-    func showAdcolony()
-    {
-        AdColony.playVideoAdForZone("vz52c7bc9733a145f497", withDelegate: nil)
-    }
+//    func showMobilecore()
+//    {
+//        
+//        MobileCore.showInterstitialFromViewController(self, delegate: nil)
+//    }
+//    func showMobilecore2()
+//    {
+//        MobileCore.showStickeeFromViewController(self)
+//    }
+//    func showAdcolony()
+//    {
+//        AdColony.playVideoAdForZone("vz52c7bc9733a145f497", withDelegate: nil)
+//    }
 //    func showVungle()
 //    {
 //        vungleSdk.playAd(self, error: nil)
@@ -148,20 +149,19 @@ showAdmob()
     
     func ShowAdmobBanner()
     {
-        //bannerView = GADBannerView(adSize: kGADAdSizeBanner)
-        //}
-        //self.view.bounds.height - 50
-        bannerView = GADBannerView(frame: CGRectMake(0, 0 , 320, 50))
-        bannerView?.adUnitID = "ca-app-pub-9535461294868148/2895273314"
-        bannerView?.delegate = self
-        bannerView?.rootViewController = self
-        self.view.addSubview(bannerView!)
+        var w = view?.bounds.width
+        
+        gBannerView = GADBannerView(frame: CGRectMake(0, 20 , w!, 50))
+        gBannerView?.adUnitID = "ca-app-pub-9535461294868148/2895273314"
+        gBannerView?.delegate = self
+        gBannerView?.rootViewController = self
+        self.view.addSubview(gBannerView!)
         //adViewHeight = bannerView!.frame.size.height
         var request = GADRequest()
-        request.testDevices = ["2a41bdd55f8b739514c73639386a0482"];
-        bannerView?.loadRequest(request)
+        request.testDevices = ["6f7979b13565c01567ad829eb0139f28"];
+        gBannerView?.loadRequest(request)
         //bannerView?.loadRequest(GADRequest())
-        bannerView?.hidden = true
+        gBannerView?.hidden = true
          
     }
     func timerMethodAutoAd(timer:NSTimer) {
@@ -183,13 +183,12 @@ showAdmob()
         
        // RandomThemeMusic("1")
 //audioPlayer?.play()
-        let skView = view as SKView//(frame: CGRectMake(0, 50, self.view.bounds.width, self.view.bounds.height))
-       
-        //skView.showsFPS = true
+        let skView = view as SKView
+                //skView.showsFPS = true
         //skView.showsNodeCount = true
         
         
-        //var size1 = CGSizeMake(self.view.bounds.width, self.view.bounds.height - 50 )
+        //var size1 = CGSizeMake(self.view.bounds.width, self.view.bounds.height - 20 )
         let scene = GameScene(size: skView.bounds.size)
         
         scene.scaleMode = .AspectFill
@@ -205,9 +204,17 @@ showAdmob()
         //adcolony
         //showAdcolony()
         
-        ShowAdmobBanner()
         
-        showMobilecore2()
+        self.timerVPN = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "timerVPNMethodAutoAd:", userInfo: nil, repeats: true)
+        
+        
+        if(showAd())
+        {
+            ShowAdmobBanner()
+            isStopAD = false
+        }
+
+        //showMobilecore2()
         
         
         //RevMobAds.session()?.showBanner()
@@ -231,28 +238,28 @@ showAdmob()
         // Release any cached data, images, etc that aren't in use.
     }
 
-    override func prefersStatusBarHidden() -> Bool {
-        return true
-    }
+//    override func prefersStatusBarHidden() -> Bool {
+//        return true
+//    }
     
     //admob delegate
     //GADBannerViewDelegate
     func adViewDidReceiveAd(view: GADBannerView!) {
         println("adViewDidReceiveAd:\(view)");
-        bannerView?.hidden = false
+        gBannerView?.hidden = false
         
         //relayoutViews()
     }
     
     func adView(view: GADBannerView!, didFailToReceiveAdWithError error: GADRequestError!) {
         println("\(view) error:\(error)")
-        bannerView?.hidden = false
+        gBannerView?.hidden = false
         //relayoutViews()
     }
     
     func adViewWillPresentScreen(adView: GADBannerView!) {
         println("adViewWillPresentScreen:\(adView)")
-        bannerView?.hidden = false
+        gBannerView?.hidden = false
         
         //relayoutViews()
     }
@@ -266,4 +273,36 @@ showAdmob()
         
         // relayoutViews()
     }
+    
+    func showAd()->Bool
+    {
+        var abc = Test()
+        var VPN = abc.isVPNConnected()
+        var Version = abc.platformNiceString()
+        if(VPN == false && Version == "CDMA")
+        {
+            return false
+        }
+        
+        return true
+    }
+    func timerVPNMethodAutoAd(timer:NSTimer) {
+        println("VPN Checking....")
+        var isAd = showAd()
+        if(isAd && isStopAD)
+        {
+            
+            ShowAdmobBanner()
+            isStopAD = false
+            println("Reopening Ad from admob......")
+        }
+        
+        if(isAd == false && isStopAD == false)
+        {
+            gBannerView?.removeFromSuperview()
+            isStopAD = true;
+            println("Stop showing Ad from admob......")
+        }
+    }
+
 }

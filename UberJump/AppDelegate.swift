@@ -21,8 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,ChartboostDelegate {
         //   withSuccessHandler: nil, andFailHandler: nil)
 
         
-        Chartboost.startWithAppId("55d6ca82c909a6085e4a0176", appSignature: "bb733356ff38c9c48311d9d881844b73cd7085c5", delegate: self)
-        
+        Chartboost.startWithAppId("564d4bdc2fdf3435b976bbc6", appSignature: "536ddd407b3baff0918062c056b8304a0ee15f02", delegate: self)
+         Chartboost.setShouldRequestInterstitialsInFirstSession(false)
         //vungle
         // Override point for customization after application launch.
 //        var appID = "55d6cb65ce017d4011000287"
@@ -33,11 +33,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate,ChartboostDelegate {
         
         //end vung le
         //adcolony\
-        AdColony.configureWithAppID("appf72e33325e794b9cb0", zoneIDs: ["vz52c7bc9733a145f497"], delegate: nil, logging: true)
-        
-        
-        MobileCore.initWithToken("3D2A61TO0BGWAT07RD8KE6PBLZK7S", logLevel: DEBUG_LOG_LEVEL, adUnits:
-            [NSNumber (unsignedInt: AD_UNIT_ALL_UNITS.value)])
+//        AdColony.configureWithAppID("appf72e33325e794b9cb0", zoneIDs: ["vz52c7bc9733a145f497"], delegate: nil, logging: true)
+//        
+//        
+//        MobileCore.initWithToken("3D2A61TO0BGWAT07RD8KE6PBLZK7S", logLevel: DEBUG_LOG_LEVEL, adUnits:
+//            [NSNumber (unsignedInt: AD_UNIT_ALL_UNITS.value)])
 
         
        
