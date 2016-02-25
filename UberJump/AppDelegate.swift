@@ -15,31 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate,ChartboostDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+       
+        Utility.SetUpAdData()
         
-        //RevMobAds.startSessionWithAppID("55d9875a2c3f445b0c14893a",
-        //   withSuccessHandler: nil, andFailHandler: nil)
+        Chartboost.startWithAppId(Utility.ChartboostAppID, appSignature: Utility.ChartboostSign, delegate: self)
+        
+        AmazonAdRegistration.sharedRegistration().setAppKey(Utility.Amazonkey)
+        AmazonAdRegistration.sharedRegistration().setLogging(true)
 
-        
-        Chartboost.startWithAppId("564d4bdc2fdf3435b976bbc6", appSignature: "536ddd407b3baff0918062c056b8304a0ee15f02", delegate: self)
-         Chartboost.setShouldRequestInterstitialsInFirstSession(false)
-        //vungle
-        // Override point for customization after application launch.
-//        var appID = "55d6cb65ce017d4011000287"
-//        var sdk = VungleSDK.sharedSDK()
-//        // start vungle publisher library
-//        sdk.startWithAppId(appID)
-//        sdk.setLoggingEnabled(true)
-        
-        //end vung le
-        //adcolony\
-//        AdColony.configureWithAppID("appf72e33325e794b9cb0", zoneIDs: ["vz52c7bc9733a145f497"], delegate: nil, logging: true)
-//        
-//        
-//        MobileCore.initWithToken("3D2A61TO0BGWAT07RD8KE6PBLZK7S", logLevel: DEBUG_LOG_LEVEL, adUnits:
-//            [NSNumber (unsignedInt: AD_UNIT_ALL_UNITS.value)])
-
-        
        
         
        

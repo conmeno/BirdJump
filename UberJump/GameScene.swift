@@ -12,17 +12,17 @@ import AVFoundation
 
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
-    let backgroundNode = SKNode()
-    let midgroundNode = SKNode()
+    var backgroundNode = SKNode()
+    var midgroundNode = SKNode()
     let foregroundNode = SKNode()
     let hudNode = SKNode()
     
-    let player = SKNode()
+    var player = SKNode()
     let tapToStart = SKSpriteNode(imageNamed: "TapToStart")
     
-    let scaleFactor: CGFloat = 0.0
+    var scaleFactor: CGFloat = 0.0
     
-    let endLevelY = 0
+    var endLevelY = 0
     var maxPlayerY = 80
     
     let motionManager = CMMotionManager()
@@ -45,10 +45,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         var error: NSError?
         
-        audioPlayer = AVAudioPlayer(contentsOfURL: url, error: &error)
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOfURL: url)
+        } catch let error1 as NSError {
+            error = error1
+            audioPlayer = nil
+        }
         
         if let err = error {
-            println("audioPlayer error \(err.localizedDescription)")
+            print("audioPlayer error \(err.localizedDescription)")
         } else {
             
             audioPlayer?.prepareToPlay()
@@ -88,16 +93,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         endLevelY = levelData["EndY"]!.integerValue
         
-        let platforms = levelData["Platforms"] as NSDictionary
-        let platformPatterns = platforms["Patterns"] as NSDictionary
-        let platformPositions = platforms["Positions"] as [NSDictionary]
+        let platforms = levelData["Platforms"] as! NSDictionary
+        let platformPatterns = platforms["Patterns"] as! NSDictionary
+        let platformPositions = platforms["Positions"] as! [NSDictionary]
         
         for platformPosition in platformPositions {
             let patternX = platformPosition["x"]?.floatValue
             let patternY = platformPosition["y"]?.floatValue
-            let pattern = platformPosition["pattern"] as NSString
+            let pattern = platformPosition["pattern"] as! NSString
             
-            let platformPattern = platformPatterns[pattern] as [NSDictionary]
+            let platformPattern = platformPatterns[pattern] as! [NSDictionary]
             for platformPoint in platformPattern {
                 let x = platformPoint["x"]?.floatValue
                 let y = platformPoint["y"]?.floatValue
@@ -109,16 +114,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
         
-        let stars = levelData["Stars"] as NSDictionary
-        let starPatterns = stars["Patterns"] as NSDictionary
-        let starPositions = stars["Positions"] as [NSDictionary]
+        let stars = levelData["Stars"] as! NSDictionary
+        let starPatterns = stars["Patterns"] as! NSDictionary
+        let starPositions = stars["Positions"] as! [NSDictionary]
         
         for starPosition in starPositions {
             let patternX = starPosition["x"]?.floatValue
             let patternY = starPosition["y"]?.floatValue
-            let pattern = starPosition["pattern"] as NSString
+            let pattern = starPosition["pattern"] as! NSString
             
-            let starPattern = starPatterns[pattern] as [NSDictionary]
+            let starPattern = starPatterns[pattern] as! [NSDictionary]
             for starPoint in starPattern {
                 let x = starPoint["x"]?.floatValue
                 let y = starPoint["y"]?.floatValue
@@ -157,8 +162,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         hudNode.addChild(lblScore)
         
         motionManager.accelerometerUpdateInterval = 0.2
-        motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.currentQueue(), withHandler: {
-            let acceleration = $0.0.acceleration
+        motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.currentQueue()!, withHandler: {
+            let acceleration = $0.0!.acceleration
             self.xAcceleration = CGFloat(acceleration.x) * 0.75 + self.xAcceleration * 0.25
         })
     }
@@ -184,7 +189,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func didBeginContact(contact: SKPhysicsContact) {
         var updateHUD = false
         let whichNode = (contact.bodyA.node != player) ? contact.bodyA.node : contact.bodyB.node
-        let other = whichNode as GameObjectNode
+        let other = whichNode as! GameObjectNode
         
         updateHUD = other.collisionWithPlayer(player)
         
@@ -194,7 +199,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+   override internal func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if player.physicsBody!.dynamic { return }
         tapToStart.removeFromParent()
         player.physicsBody!.dynamic = true
@@ -235,7 +240,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         node.position = thePosition
         node.name = "NODE_PLATFORM"
         
-        var sprite = SKSpriteNode(imageNamed: type == .Break ? "PlatformBreak" : "Platform")
+        let sprite = SKSpriteNode(imageNamed: type == .Break ? "PlatformBreak" : "Platform")
         node.addChild(sprite)
         
         node.physicsBody = SKPhysicsBody(rectangleOfSize: sprite.size)
@@ -254,7 +259,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         node.name = "NODE_STAR"
         
         
-        var sprite = SKSpriteNode(imageNamed: type == .Normal ? "Star" : "StarSpecial")
+        let sprite = SKSpriteNode(imageNamed: type == .Normal ? "Star" : "StarSpecial")
         node.addChild(sprite)
         
         node.physicsBody = SKPhysicsBody(circleOfRadius: sprite.size.width / 2)
@@ -307,11 +312,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         if player.position.y > 200 {
             foregroundNode.enumerateChildNodesWithName("NODE_PLATFORM", usingBlock: {
-                let platform = $0.0 as PlatformNode
+                let platform = $0.0 as! PlatformNode
                 platform.checkNodeRemoval(self.player.position.y)
             })
             foregroundNode.enumerateChildNodesWithName("NODE_STAR", usingBlock: {
-                let star = $0.0 as StarNode
+                let star = $0.0 as! StarNode
                 star.checkNodeRemoval(self.player.position.y)
             })
             backgroundNode.position = CGPoint(x: 0.0, y: -((player.position.y - 200) / 10))
