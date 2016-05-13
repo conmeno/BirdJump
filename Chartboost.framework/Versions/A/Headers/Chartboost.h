@@ -267,7 +267,7 @@ extern CBLocation const CBLocationDefault;
  The viewController object allows the "more applications" page to be presented modally in a specified
  view hierarchy. If the Chartboost API server is unavailable or there is no eligible "more applications" 
  to present in the given CBLocation this method is a no-op.
-// */
+ */
 //+ (void)showMoreApps:(UIViewController *)viewController
 //            location:(CBLocation)location;
 

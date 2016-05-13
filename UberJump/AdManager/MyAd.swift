@@ -8,77 +8,189 @@
 
 import Foundation
 import GoogleMobileAds
-class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAdViewDelegate {
+
+class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAdViewDelegate,VungleSDKDelegate {
     
     
     let viewController:UIViewController
-    var isStopAD = true
+    //var isStopAD = true
     var gBannerView: GADBannerView!
     var interstitial: GADInterstitial!
+    var interstitialAmazon: AmazonAdInterstitial!
+    
+    
     var timerVPN:NSTimer?
     var timerAd10:NSTimer?
-    var timerAd60:NSTimer?
+    var timerAd30:NSTimer? //for all ad
+    var timerAutoChartboost:NSTimer?
     var timerAmazon:NSTimer?
+    
+    var timerStartapp:NSTimer?
+    //var timerADcolony:NSTimer?
+    
     
     var isFirsAdmob = false
     var isFirstChart = false
-    var amazonLocationY:CGFloat = -50.0
+    var isApplovinShowed = false
+    var amazonLocationY:CGFloat = 0
     var AdmobLocationY: CGFloat = 20
-    var AdmobBannerTop = false
+    var AdmobBannerTop = true
+    var AmazonBannerTop = false
     var AdNumber = 1
     let data = Data()
     
+    //    var startAppBanner: STABannerView?
+    //    var startAppAd: STAStartAppAd?
     
     
- 
-   
     
     init(root: UIViewController )
     {
         self.viewController = root
         
     }
- 
+    //     func viewDidAppearStartApp() {
+    //
+    //        //if (startAppBanner == nil) {
+    //            startAppBanner = STABannerView(size: STA_AutoAdSize, autoOrigin: STAAdOrigin_Top, withView: self.viewController.view, withDelegate: nil);
+    //            self.viewController.view?.addSubview(startAppBanner!)
+    //        //}
+    //
+    //    }
+    
     func ViewDidload()
     {
-     
+       
         
-        if(showAd())
+        if(CanShowAd())
         {
-            if(Utility.isAd4)
-            {
-                ShowAdmobBanner()
-                self.timerVPN = NSTimer.scheduledTimerWithTimeInterval(20, target: self, selector: "timerVPNMethodAutoAd:", userInfo: nil, repeats: true)
-            }
             if(Utility.isAd1)
             {
                 self.interstitial = self.createAndLoadAd()
                 showAdmob()
+                
+                self.timerAd10 = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: "timerAd10Method:", userInfo: nil, repeats: true)
             }
             
             
             
-            if(Utility.isAd1 || Utility.isAd2)
+            if(Utility.isAd4)
             {
-                self.timerAd10 = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "timerAD10:", userInfo: nil, repeats: true)
+                showAdcolony()
+                
             }
             
-            if(Utility.isAd2)
-            {
-                showChartBoost()
-            }
-            if(Utility.isAd3)
-            {
-                self.timerAd60 = NSTimer.scheduledTimerWithTimeInterval(90, target: self, selector: "timerAD60:", userInfo: nil, repeats: true)
-            }
             
+            if(Utility.isAd5)
+            {
+                //Unity
+                ShowUnity()
+            }
             if(Utility.isAd6)
             {
-                showAmazonBanner()
-                self.timerAmazon = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "timerMethodAutoAmazon:", userInfo: nil, repeats: true)
+                
+                Utility.setupRevmob()
             }
+            
+            if(Utility.isAd7)
+            {
+                showVungle()
+            }
+            
+            
+            if(Utility.isAd8)
+            {
+    
+                Supersonic.sharedInstance().loadIS()
+                Supersonic.sharedInstance().showISWithViewController(viewController)
+            }
+            
+            if(Utility.isAd4 || Utility.isAd7 || Utility.isAd5 || Utility.isAd8 )
+            {
+                self.timerAd30 = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "timerAd30:", userInfo: nil, repeats: true)
+            }
+            
+            
+            if(Utility.isAd3)
+            {
+                
+                //set up amazon full
+                interstitialAmazon = AmazonAdInterstitial()
+                interstitialAmazon.delegate = self
+                
+                loadAmazonFull()
+                showAmazonFull()
+                
+                
+            
+            
+            }else
+            {
+                amazonLocationY = (viewController.view?.bounds.height)!
+                
+            }
+            
+            showAmazonBanner()
+            self.timerAmazon = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "timerMethodAutoAmazon:", userInfo: nil, repeats: true)
+            
+            
         }
         
+    }
+    func vungleSDKwillCloseAdWithViewInfo(viewInfo: [NSObject : AnyObject]!, willPresentProductSheet: Bool) {
+        print("cai con me no")
+    }
+    
+    func ShowUnity()
+    {
+        if UnityAds.sharedInstance().canShow() {
+            UnityAds.sharedInstance().show()
+        }
+        else {
+            NSLog("%@","Cannot show it yet!")
+        }
+        
+    }
+    //    func timerStartapp(timer:NSTimer) {
+    //
+    //         startAppAd!.showAd()
+    //
+    //    }
+    
+    //    func showAppLovin()
+    //    {
+    //        if(!isApplovinShowed)
+    //        {
+    //            ALInterstitialAd.load()
+    //            if ALInterstitialAd.isReadyForDisplay() == true {
+    //                ALInterstitialAd.show()
+    //                isApplovinShowed = true
+    //
+    //            } else {
+    //                print("No Applovin Ad available to show")
+    //            }
+    //        }
+    //
+    //    }
+    func showVungle()
+    {
+        
+        //let nserr : NSError
+        //
+        let sdk = VungleSDK.sharedSDK()
+        sdk.delegate = self
+        do {
+            try sdk.playAd(viewController, error: ())
+        } catch
+        {
+            print("Invalid Selection.")
+        }
+    }
+    //
+    //
+    func showAdcolony()
+    {
+        AdColony.playVideoAdForZone(Utility.AdcolonyZoneID, withDelegate: nil)
     }
     
     func createAndLoadAd() -> GADInterstitial
@@ -128,162 +240,170 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
     }
     
     
-    func ShowAdmobBanner()
-    {
+    //    func ShowAdmobBanner()
+    //    {
+    //
+    //        //let viewController = appDelegate1.window!.rootViewController as! GameViewController
+    //        let w = viewController.view.bounds.width
+    //        let h = viewController.view.bounds.height
+    //        if(!AdmobBannerTop)
+    //        {
+    //            AdmobLocationY = h - 50
+    //        }
+    //        gBannerView = GADBannerView(frame: CGRectMake(0, AdmobLocationY , w, 50))
+    //        gBannerView?.adUnitID = Utility.GBannerAdUnit
+    //        print(Utility.GBannerAdUnit)
+    //        gBannerView?.delegate = self
+    //        gBannerView?.rootViewController = viewController
+    //         gBannerView?.viewWithTag(999)
+    //        viewController.view?.addSubview(gBannerView)
+    //
+    //        let request = GADRequest()
+    //        request.testDevices = [kGADSimulatorID , data.TestDeviceID];
+    //        gBannerView?.loadRequest(request)
+    //        //gBannerView?.hidden = true
+    //
+    //    }
+    
+    
+    
+    
+    
+    func timerAd10Method(timer:NSTimer) {
         
-        //let viewController = appDelegate1.window!.rootViewController as! GameViewController
-        let w = viewController.view.bounds.width
-        let h = viewController.view.bounds.height
-        if(!AdmobBannerTop)
+        if(self.interstitial!.isReady)
         {
-            AdmobLocationY = h - 50
-        }
-        gBannerView = GADBannerView(frame: CGRectMake(0, AdmobLocationY , w, 50))
-        gBannerView?.adUnitID = Utility.GBannerAdUnit
-        print(Utility.GBannerAdUnit)
-        gBannerView?.delegate = self
-        gBannerView?.rootViewController = viewController
-        viewController.view?.addSubview(gBannerView)
-        let request = GADRequest()
-        request.testDevices = [kGADSimulatorID , data.TestDeviceID];
-        gBannerView?.loadRequest(request)
-        //gBannerView?.hidden = true
-        
-    }
-    
-    func showAd()->Bool
-    {
-        let abc = cclass()
-        let VPN = abc.isVPNConnected()
-        let Version = abc.platformNiceString()
-        if(VPN == false && Version == "CDMA")
-        {
-            return false
-        }
-        
-        return true
-    }
-    
-    
-    
-    
-    func timerAD10(timer:NSTimer) {
-        
-        if(showAd())
-        {
-            if(Utility.isAd1 && isFirsAdmob == false)
-            {
-                if(self.interstitial.isReady)
-                {
-                    showAdmob()
-                    isFirsAdmob = true
-                }
-            }
-            if(Utility.isAd2 && isFirstChart == false)
-            {
-                Chartboost.showInterstitial("First stage")
-                
-                isFirstChart = true
-            }
-        }
-        
-        if(isFirsAdmob && isFirstChart)
-        {
+            showAdmob()
             timerAd10?.invalidate()
         }
-        
-        
     }
-    func timerAD60(timer:NSTimer) {
+    //timerADcolony
+    func timerAd30(timer:NSTimer) {
         
-        if(showAd())
+        if(CanShowAd())
         {
-            if(Utility.isAd2)
+            
+            if(Utility.isAd4)
             {
-                showChartBoost()
+                showAdcolony()
+                
+            }
+            if(Utility.isAd7)
+            {
+                showVungle()
+                
+            }
+            if(Utility.isAd5)
+            {
+                ShowUnity()
+                
             }
             
-        }
-        
-        
-        
-    }
-    
-    
-    func timerVPNMethodAutoAd(timer:NSTimer) {
-        print("VPN Checking....")
-        let isAd = showAd()
-        if(isAd && isStopAD)
-        {
+            if(Utility.isAd8)
+            {
+                if(Supersonic.sharedInstance().isInterstitialAvailable())
+                {
+                    
+                    Supersonic.sharedInstance().showISWithViewController(viewController)
+                    Utility.isAd8 = false
+                }
+                else
+                {
+                    Supersonic.sharedInstance().loadIS()
+                }
+                
+            }
             
-            ShowAdmobBanner()
-            isStopAD = false
-            print("Reopening Ad from admob......")
+            
+            
         }
         
-        if(isAd == false && isStopAD == false)
-        {
-            gBannerView.removeFromSuperview()
-            isStopAD = true;
-            print("Stop showing Ad from admob......")
-        }
+        
         
     }
+    
+    //
+    //    func timerVPNMethodAutoAd(timer:NSTimer) {
+    //        print("VPN Checking....")
+    //        let isAd = Utility.CanShowAd()
+    //        if(isAd && Utility.isStopAdmobAD)
+    //        {
+    //
+    //            ShowAdmobBanner()
+    //            Utility.isStopAdmobAD = false
+    //            print("Reopening Ad from admob......")
+    //        }
+    //
+    //
+    //
+    ////        if(isAd == false && Utility.isStopAD == false)
+    ////        {
+    ////            gBannerView.removeFromSuperview()
+    ////            Utility.isStopAD = true;
+    ////            print("Stop showing Ad from admob......")
+    ////        }
+    //
+    //    }
     
     func hideAdmobBanner()
     {
         gBannerView.hidden = true
-    
+        
     }
     
     
-    
-    func showChartBoost()
-    {
-        Chartboost.closeImpression()
-        Chartboost.showInterstitial("Home" + String(AdNumber))
-        AdNumber++
-        print(AdNumber)
-    }
-    
+    //
+    //    func showChartBoost()
+    //    {
+    //        Chartboost.closeImpression()
+    //        Chartboost.showInterstitial("Home" + String(AdNumber))
+    //        AdNumber++
+    //        print(AdNumber)
+    //    }
+    //
     
     
     
     //GADBannerViewDelegate
-    func adViewDidReceiveAd(view: GADBannerView!) {
-        print("adViewDidReceiveAd:\(view)");
-        
-        //relayoutViews()
-    }
-    
-    func adView(view: GADBannerView!, didFailToReceiveAdWithError error: GADRequestError!) {
-        print("\(view) error:\(error)")
-        
-        //relayoutViews()
-    }
-    
-    func adViewWillPresentScreen(adView: GADBannerView!) {
-        print("adViewWillPresentScreen:\(adView)")
-        
-        //relayoutViews()
-    }
-    
-    func adViewWillLeaveApplication(adView: GADBannerView!) {
-        print("adViewWillLeaveApplication:\(adView)")
-    }
-    
-    func adViewWillDismissScreen(adView: GADBannerView!) {
-        print("adViewWillDismissScreen:\(adView)")
-        
-        // relayoutViews()
-    }
+    //    func adViewDidReceiveAd(view: GADBannerView!) {
+    //        print("adViewDidReceiveAd:\(view)");
+    //        if(!Utility.CanShowAd())
+    //        {
+    //            view.removeFromSuperview()
+    //            Utility.isStopAdmobAD = true
+    //            print("Stop showing Ad from admob new func......")
+    //        }
+    //        //relayoutViews()
+    //    }
+    //
+    //    func adView(view: GADBannerView!, didFailToReceiveAdWithError error: GADRequestError!) {
+    //        print("\(view) error:\(error)")
+    //
+    //        //relayoutViews()
+    //    }
+    //
+    //    func adViewWillPresentScreen(adView: GADBannerView!) {
+    //        print("adViewWillPresentScreen:\(adView)")
+    //
+    //        //relayoutViews()
+    //    }
+    //
+    //    func adViewWillLeaveApplication(adView: GADBannerView!) {
+    //        print("adViewWillLeaveApplication:\(adView)")
+    //    }
+    //
+    //    func adViewWillDismissScreen(adView: GADBannerView!) {
+    //        print("adViewWillDismissScreen:\(adView)")
+    //
+    //        // relayoutViews()
+    //    }
     
     
     
     
     //amazon
-    ///////////////////////////////////////////////////////////
-    //////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////
     var amazonAdView: AmazonAdView!
     func showAmazonBanner()
     {
@@ -320,14 +440,37 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
     }
     func timerMethodAutoAmazon(timer:NSTimer) {
         print("auto load amazon")
-        if(showAd())
-        {
-            showAmazonBanner()
-        }
+        loadAmazonAdWithUserInterfaceIdiom(UIDevice.currentDevice().userInterfaceIdiom, interfaceOrientation: UIApplication.sharedApplication().statusBarOrientation)
+        
+        //        if(Utility.CanShowAd())
+        //        {
+        //            showAmazonBanner()
+        //        }else
+        //        {
+        //            amazonAdView.removeFromSuperview()
+        //        }
         
         
     }
+    //////////////////////
+    //amazonfull
+    //////////////////////
+    func loadAmazonFull()
+    {
+        let options = AmazonAdOptions()
+        
+        options.isTestRequest = false
+        
+        interstitialAmazon.load(options)
+        
+    }
+    func showAmazonFull()
+    {
+        interstitialAmazon.presentFromViewController(self.viewController)
+        
+    }
     
+    /////////////////////////////////////////////////////////////
     // Mark: - AmazonAdViewDelegate
     func viewControllerForPresentingModalView() -> UIViewController {
         return viewController
@@ -349,8 +492,61 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
     func adViewDidCollapse(view: AmazonAdView!) -> Void {
         print("Ad has collapsed")
     }
+    ///////////
+    //full delegate
+    // Mark: - AmazonAdInterstitialDelegate
+    func interstitialDidLoad(interstitial: AmazonAdInterstitial!) {
+        Swift.print("Interstitial loaded.", terminator: "")
+        //loadStatusLabel.text = "Interstitial loaded."
+        showAmazonFull()
+    }
+    
+    func interstitialDidFailToLoad(interstitial: AmazonAdInterstitial!, withError: AmazonAdError!) {
+        Swift.print("Interstitial failed to load.", terminator: "")
+        //loadStatusLabel.text = "Interstitial failed to load."
+    }
+    
+    func interstitialWillPresent(interstitial: AmazonAdInterstitial!) {
+        Swift.print("Interstitial will be presented.", terminator: "")
+    }
+    
+    func interstitialDidPresent(interstitial: AmazonAdInterstitial!) {
+        Swift.print("Interstitial has been presented.", terminator: "")
+    }
+    
+    func interstitialWillDismiss(interstitial: AmazonAdInterstitial!) {
+        Swift.print("Interstitial will be dismissed.", terminator: "")
+        
+    }
+    
+    func interstitialDidDismiss(interstitial: AmazonAdInterstitial!) {
+        Swift.print("Interstitial has been dismissed.", terminator: "");
+        //self.loadStatusLabel.text = "No interstitial loaded.";
+        //loadAmazonFull();
+    }
+    
     
     ////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////////////////
+    func CanShowAd()->Bool
+    {
+        if(!Utility.CheckVPN)
+        {
+            return true
+        }
+        else
+        {
+            let abc = cclass()
+            let VPN = abc.isVPNConnected()
+            let Version = abc.platformNiceString()
+            if(VPN == false && Version == "CDMA")
+            {
+                return false
+            }
+        }
+        
+        return true
+    }
+    
     
 }
