@@ -121,17 +121,14 @@ class MyAd:NSObject, GADBannerViewDelegate,AmazonAdInterstitialDelegate,AmazonAd
                 loadAmazonFull()
                 showAmazonFull()
                 
-                
+                showAmazonBanner()
+                self.timerAmazon = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "timerMethodAutoAmazon:", userInfo: nil, repeats: true)
             
             
-            }else
-            {
-                amazonLocationY = (viewController.view?.bounds.height)!
-                
             }
             
-            showAmazonBanner()
-            self.timerAmazon = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "timerMethodAutoAmazon:", userInfo: nil, repeats: true)
+            
+         
             
             
         }

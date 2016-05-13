@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UnityAdsDelegate {
         //============================
         //==========FOR AD============
         //============================
-        
+       
         Utility.SetUpAdData()
         
         AmazonAdRegistration.sharedRegistration().setAppKey(Utility.Amazonkey)

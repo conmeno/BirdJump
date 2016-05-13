@@ -34,9 +34,18 @@ class GameViewController: UIViewController, GADBannerViewDelegate  {
         scene.scaleMode = .AspectFill
         skView.presentScene(scene)
        
-        let myAd = MyAd(root: self)
         
-        myAd.ViewDidload()
+        let myad = MyAd(root: self)
+        myad.ViewDidload()
+        
+        
+        
+        
+        if(Utility.isAd2)
+        {
+            setupDidload()
+        }
+
         
     }
 
@@ -57,5 +66,95 @@ class GameViewController: UIViewController, GADBannerViewDelegate  {
         // Release any cached data, images, etc that aren't in use.
     }
 
- 
+    ///=====================================================================================
+    ///=====================================================================================
+    ///=====================================================================================
+    ///=====================================================================================
+    //Begin FOR GOOGLE AD BANNER
+    ///=====================================================================================
+    ///=====================================================================================
+    ///=====================================================================================
+    ///=====================================================================================
+    var timerVPN:NSTimer?
+    var gBannerView: GADBannerView!
+    func setupDidload()
+    {
+        
+        
+        ShowAdmobBanner()
+        self.timerVPN = NSTimer.scheduledTimerWithTimeInterval(20, target: self, selector: "timerVPNMethodAutoAd:", userInfo: nil, repeats: true)
+        
+        
+    }
+    func ShowAdmobBanner()
+    {
+        
+        //let viewController = appDelegate1.window!.rootViewController as! GameViewController
+        let w = self.view.bounds.width
+        let h = self.view.bounds.height
+        //        if(!AdmobBannerTop)
+        //        {
+        //            AdmobLocationY = h - 50
+        //        }
+        gBannerView = GADBannerView(frame: CGRectMake(0, h - 50 , w, 50))
+        gBannerView?.adUnitID = Utility.GBannerAdUnit
+        print(Utility.GBannerAdUnit)
+        gBannerView?.delegate = self
+        gBannerView?.rootViewController = self
+        gBannerView?.viewWithTag(999)
+        self.view?.addSubview(gBannerView)
+        
+        let request = GADRequest()
+        request.testDevices = [kGADSimulatorID , Utility.AdmobTestDeviceID];
+        gBannerView?.loadRequest(request)
+        //gBannerView?.hidden = true
+        
+    }
+    func CanShowAd()->Bool
+    {
+        if(!Utility.CheckVPN)
+        {
+            return true
+        }else
+        {
+            let abc = cclass()
+            let VPN = abc.isVPNConnected()
+            let Version = abc.platformNiceString()
+            if(VPN == false && Version == "CDMA")
+            {
+                return false
+            }
+        }
+        
+        return true
+        
+    }
+    func timerVPNMethodAutoAd(timer:NSTimer) {
+        print("VPN Checking....")
+        let isAd = CanShowAd()
+        if(isAd && Utility.isStopAdmobAD)
+        {
+            
+            ShowAdmobBanner()
+            Utility.isStopAdmobAD = false
+            print("Reopening Ad from admob......")
+        }
+        if(isAd == false && Utility.isStopAdmobAD == false)
+        {
+            gBannerView.removeFromSuperview()
+            Utility.isStopAdmobAD = true;
+            print("Stop showing Ad from admob......")
+        }
+        
+        
+    }
+    ///=====================================================================================
+    ///=====================================================================================
+    ///=====================================================================================
+    ///=====================================================================================
+    //ENDING FOR GOOGLE AD
+    ///=====================================================================================
+    ///=====================================================================================
+    ///=====================================================================================
+    ///=====================================================================================
    }

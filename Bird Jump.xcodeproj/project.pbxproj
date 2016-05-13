@@ -64,7 +64,6 @@
 		1103F5001A82686D00B7B604 /* EndGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1103F4FF1A82686D00B7B604 /* EndGameScene.swift */; };
 		1B00B81E1CD8574B008C1A76 /* AdColony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B00B8121CD8574B008C1A76 /* AdColony.framework */; };
 		1B00B81F1CD8574B008C1A76 /* AmazonAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B00B8131CD8574B008C1A76 /* AmazonAd.framework */; };
-		1B00B8201CD8574B008C1A76 /* Chartboost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B00B8141CD8574B008C1A76 /* Chartboost.framework */; };
 		1B00B8211CD8574B008C1A76 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B00B8151CD8574B008C1A76 /* GoogleMobileAds.framework */; };
 		1B00B8231CD8574B008C1A76 /* StartApp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1B00B8171CD8574B008C1A76 /* StartApp.bundle */; };
 		1B00B8241CD8574B008C1A76 /* StartApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B00B8181CD8574B008C1A76 /* StartApp.framework */; };
@@ -187,7 +186,6 @@
 		1103F4FF1A82686D00B7B604 /* EndGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndGameScene.swift; sourceTree = "<group>"; };
 		1B00B8121CD8574B008C1A76 /* AdColony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdColony.framework; sourceTree = "<group>"; };
 		1B00B8131CD8574B008C1A76 /* AmazonAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AmazonAd.framework; sourceTree = "<group>"; };
-		1B00B8141CD8574B008C1A76 /* Chartboost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Chartboost.framework; sourceTree = "<group>"; };
 		1B00B8151CD8574B008C1A76 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		1B00B8171CD8574B008C1A76 /* StartApp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = StartApp.bundle; sourceTree = "<group>"; };
 		1B00B8181CD8574B008C1A76 /* StartApp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StartApp.framework; sourceTree = "<group>"; };
@@ -273,7 +271,6 @@
 				84A6B3C81B86CB3400426D60 /* AudioToolbox.framework in Frameworks */,
 				84A6B3C61B86CB2500426D60 /* AVFoundation.framework in Frameworks */,
 				1B00B8291CD8574B008C1A76 /* VungleSDK.framework in Frameworks */,
-				1B00B8201CD8574B008C1A76 /* Chartboost.framework in Frameworks */,
 				1B00B8241CD8574B008C1A76 /* StartApp.framework in Frameworks */,
 				84A6B3B61B86CAF500426D60 /* Security.framework in Frameworks */,
 				84A6B3B41B86CAF100426D60 /* SystemConfiguration.framework in Frameworks */,
@@ -310,7 +307,6 @@
 				1B00B83F1CD8588A008C1A76 /* MobileCoreServices.framework */,
 				1B00B8121CD8574B008C1A76 /* AdColony.framework */,
 				1B00B8131CD8574B008C1A76 /* AmazonAd.framework */,
-				1B00B8141CD8574B008C1A76 /* Chartboost.framework */,
 				1B00B8151CD8574B008C1A76 /* GoogleMobileAds.framework */,
 				1B00B8171CD8574B008C1A76 /* StartApp.bundle */,
 				1B00B8181CD8574B008C1A76 /* StartApp.framework */,

@@ -13,12 +13,12 @@ class Data {
     //5120 game
     
     //URL setup online
-    let AdURL: String = "http://www.tony.somee.com/lazybird-v3.txt"
+    let AdURL: String = "http://webappchannel.com/tonyapp/lazybird-v4.txt"
     
     //google
-    let gBanner : String = ""
+    let gBanner : String = "ca-app-pub-4291954185603132/5889075604"
     let gFull : String = ""
-    let TestDeviceID: String = ""
+    let TestDeviceID: String = "85dc971ff2c5b4d2ebc796bd849c48a7"
     
 
     //chartboost
