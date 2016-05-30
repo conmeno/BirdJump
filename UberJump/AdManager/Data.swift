@@ -13,7 +13,7 @@ class Data {
     //5120 game
     
     //URL setup online
-    let AdURL: String = "http://webappchannel.com/tonyapp/lazybird-v4.txt"
+    let AdURL: String = "http://webappchannel.com/tonyapp/baby-bird-v4.txt"
     
     //google
     let gBanner : String = "ca-app-pub-4291954185603132/5889075604"
@@ -25,14 +25,14 @@ class Data {
     let cAppID: String = ""
     let cSign : String = ""
     //amazon
-    let AmazonKey: String = "6ba5e05c7d1d4c8dac0f6d316acaea9a"
+    let AmazonKey: String = "5449470a14414b40a25f45a1fb7ebf3d"
     
     //adcolony
-    let AdcolonyAppID: String = "appf1d172ad53104bd9b7"
-    let AdcolonyZoneID: String = "vza343ae27ba6e40179e"
+    let AdcolonyAppID: String = "app5541e30d9e4f4727af"
+    let AdcolonyZoneID: String = "vzda0a261d16c9409891"
     
     //revmob appID
-    let RevmobID: String = "55d9875a2c3f445b0c14893a"
+    let RevmobID: String = "5745696880b3111731c69162"
     
     //Vungle ID
     let VungleID: String = ""

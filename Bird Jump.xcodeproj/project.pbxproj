@@ -65,8 +65,6 @@
 		1B00B81E1CD8574B008C1A76 /* AdColony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B00B8121CD8574B008C1A76 /* AdColony.framework */; };
 		1B00B81F1CD8574B008C1A76 /* AmazonAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B00B8131CD8574B008C1A76 /* AmazonAd.framework */; };
 		1B00B8211CD8574B008C1A76 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B00B8151CD8574B008C1A76 /* GoogleMobileAds.framework */; };
-		1B00B8231CD8574B008C1A76 /* StartApp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1B00B8171CD8574B008C1A76 /* StartApp.bundle */; };
-		1B00B8241CD8574B008C1A76 /* StartApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B00B8181CD8574B008C1A76 /* StartApp.framework */; };
 		1B00B8251CD8574B008C1A76 /* Supersonic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B00B8191CD8574B008C1A76 /* Supersonic.framework */; };
 		1B00B8261CD8574B008C1A76 /* UnityAds.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1B00B81A1CD8574B008C1A76 /* UnityAds.bundle */; };
 		1B00B8271CD8574B008C1A76 /* UnityAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B00B81B1CD8574B008C1A76 /* UnityAds.framework */; };
@@ -88,7 +86,6 @@
 		1B00B8481CD8589D008C1A76 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B00B8471CD8589D008C1A76 /* libsqlite3.0.tbd */; };
 		1B00B84B1CD858C6008C1A76 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B00B8491CD858C6008C1A76 /* StoreKit.framework */; };
 		1B00B84C1CD858C6008C1A76 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B00B84A1CD858C6008C1A76 /* WebKit.framework */; };
-		1B00B84E1CD8FD64008C1A76 /* RevMobAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B00B84D1CD8FD64008C1A76 /* RevMobAds.framework */; };
 		843883CE1B89AFF100EBCDC1 /* 3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 843883CA1B89AFF000EBCDC1 /* 3.mp3 */; };
 		84A490851B901A0700244465 /* vg_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A490841B901A0700244465 /* vg_close.png */; };
 		84A6B3A21B86CA8C00426D60 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3A11B86CA8C00426D60 /* AdSupport.framework */; };
@@ -112,6 +109,7 @@
 		84A6B3CC1B86CB3D00426D60 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3CA1B86CB3D00426D60 /* CoreMedia.framework */; };
 		84A6B3CF1B86CB4400426D60 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3CD1B86CB4400426D60 /* EventKit.framework */; };
 		84A6B3D01B86CB4400426D60 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3CE1B86CB4400426D60 /* EventKitUI.framework */; };
+		96584C3C1CFC00820008F44C /* RevMobAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96584C3B1CFC00820008F44C /* RevMobAds.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -187,8 +185,6 @@
 		1B00B8121CD8574B008C1A76 /* AdColony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdColony.framework; sourceTree = "<group>"; };
 		1B00B8131CD8574B008C1A76 /* AmazonAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AmazonAd.framework; sourceTree = "<group>"; };
 		1B00B8151CD8574B008C1A76 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
-		1B00B8171CD8574B008C1A76 /* StartApp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = StartApp.bundle; sourceTree = "<group>"; };
-		1B00B8181CD8574B008C1A76 /* StartApp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StartApp.framework; sourceTree = "<group>"; };
 		1B00B8191CD8574B008C1A76 /* Supersonic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Supersonic.framework; sourceTree = "<group>"; };
 		1B00B81A1CD8574B008C1A76 /* UnityAds.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = UnityAds.bundle; sourceTree = "<group>"; };
 		1B00B81B1CD8574B008C1A76 /* UnityAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UnityAds.framework; sourceTree = "<group>"; };
@@ -212,7 +208,6 @@
 		1B00B8471CD8589D008C1A76 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		1B00B8491CD858C6008C1A76 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		1B00B84A1CD858C6008C1A76 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/PrivateFrameworks/WebKit.framework; sourceTree = SDKROOT; };
-		1B00B84D1CD8FD64008C1A76 /* RevMobAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RevMobAds.framework; sourceTree = "<group>"; };
 		843883CA1B89AFF000EBCDC1 /* 3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 3.mp3; sourceTree = "<group>"; };
 		84A490841B901A0700244465 /* vg_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vg_close.png; sourceTree = "<group>"; };
 		84A6B3A11B86CA8C00426D60 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -236,6 +231,7 @@
 		84A6B3CA1B86CB3D00426D60 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		84A6B3CD1B86CB4400426D60 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		84A6B3CE1B86CB4400426D60 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		96584C3B1CFC00820008F44C /* RevMobAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RevMobAds.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,7 +243,6 @@
 				1B00B84C1CD858C6008C1A76 /* WebKit.framework in Frameworks */,
 				84A6B3C41B86CB1F00426D60 /* CFNetwork.framework in Frameworks */,
 				84A6B3CF1B86CB4400426D60 /* EventKit.framework in Frameworks */,
-				1B00B84E1CD8FD64008C1A76 /* RevMobAds.framework in Frameworks */,
 				84A6B3D01B86CB4400426D60 /* EventKitUI.framework in Frameworks */,
 				84A6B3AE1B86CAC200426D60 /* Foundation.framework in Frameworks */,
 				84A6B3BC1B86CB0700426D60 /* MediaPlayer.framework in Frameworks */,
@@ -263,6 +258,7 @@
 				84A6B3C11B86CB1700426D60 /* CoreAudio.framework in Frameworks */,
 				84A6B3B21B86CAD100426D60 /* CoreGraphics.framework in Frameworks */,
 				84A6B3C21B86CB1700426D60 /* CoreLocation.framework in Frameworks */,
+				96584C3C1CFC00820008F44C /* RevMobAds.framework in Frameworks */,
 				84A6B3CC1B86CB3D00426D60 /* CoreMedia.framework in Frameworks */,
 				84A6B3BE1B86CB0D00426D60 /* CoreTelephony.framework in Frameworks */,
 				1B00B81E1CD8574B008C1A76 /* AdColony.framework in Frameworks */,
@@ -271,7 +267,6 @@
 				84A6B3C81B86CB3400426D60 /* AudioToolbox.framework in Frameworks */,
 				84A6B3C61B86CB2500426D60 /* AVFoundation.framework in Frameworks */,
 				1B00B8291CD8574B008C1A76 /* VungleSDK.framework in Frameworks */,
-				1B00B8241CD8574B008C1A76 /* StartApp.framework in Frameworks */,
 				84A6B3B61B86CAF500426D60 /* Security.framework in Frameworks */,
 				84A6B3B41B86CAF100426D60 /* SystemConfiguration.framework in Frameworks */,
 				1B00B8271CD8574B008C1A76 /* UnityAds.framework in Frameworks */,
@@ -296,7 +291,7 @@
 		1103F46D1A82472600B7B604 = {
 			isa = PBXGroup;
 			children = (
-				1B00B84D1CD8FD64008C1A76 /* RevMobAds.framework */,
+				96584C3B1CFC00820008F44C /* RevMobAds.framework */,
 				1B00B8491CD858C6008C1A76 /* StoreKit.framework */,
 				1B00B84A1CD858C6008C1A76 /* WebKit.framework */,
 				1B00B8471CD8589D008C1A76 /* libsqlite3.0.tbd */,
@@ -308,8 +303,6 @@
 				1B00B8121CD8574B008C1A76 /* AdColony.framework */,
 				1B00B8131CD8574B008C1A76 /* AmazonAd.framework */,
 				1B00B8151CD8574B008C1A76 /* GoogleMobileAds.framework */,
-				1B00B8171CD8574B008C1A76 /* StartApp.bundle */,
-				1B00B8181CD8574B008C1A76 /* StartApp.framework */,
 				1B00B8191CD8574B008C1A76 /* Supersonic.framework */,
 				1B00B81A1CD8574B008C1A76 /* UnityAds.bundle */,
 				1B00B81B1CD8574B008C1A76 /* UnityAds.framework */,
@@ -525,7 +518,7 @@
 				TargetAttributes = {
 					1103F4751A82472600B7B604 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 597LVZ4LQD;
+						DevelopmentTeam = 6SZC32EP3F;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 0;
@@ -581,7 +574,6 @@
 				1103F4F41A82484F00B7B604 /* Background20.png in Resources */,
 				1103F4D61A82484F00B7B604 /* Background05.png in Resources */,
 				1B00B83B1CD8579B008C1A76 /* StoryboardAD.storyboard in Resources */,
-				1B00B8231CD8574B008C1A76 /* StartApp.bundle in Resources */,
 				1103F4DD1A82484F00B7B604 /* Background08@2x.png in Resources */,
 				1103F4DF1A82484F00B7B604 /* Background09@2x.png in Resources */,
 				1103F4CF1A82484F00B7B604 /* Background01@2x.png in Resources */,
@@ -782,7 +774,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "phuongntnew.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "phuongnguyennew.Bird-Jump";
 				PRODUCT_NAME = "Bird Jump";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "UberJump/AdManager/Bridging-header.h";
@@ -806,7 +798,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "phuongntnew.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "phuongnguyennew.Bird-Jump";
 				PRODUCT_NAME = "Bird Jump";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "UberJump/AdManager/Bridging-header.h";
