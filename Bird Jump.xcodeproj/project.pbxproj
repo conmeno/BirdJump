@@ -88,7 +88,6 @@
 		1B00B8481CD8589D008C1A76 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B00B8471CD8589D008C1A76 /* libsqlite3.0.tbd */; };
 		1B00B84B1CD858C6008C1A76 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B00B8491CD858C6008C1A76 /* StoreKit.framework */; };
 		1B00B84C1CD858C6008C1A76 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B00B84A1CD858C6008C1A76 /* WebKit.framework */; };
-		1B00B84E1CD8FD64008C1A76 /* RevMobAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B00B84D1CD8FD64008C1A76 /* RevMobAds.framework */; };
 		843883CE1B89AFF100EBCDC1 /* 3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 843883CA1B89AFF000EBCDC1 /* 3.mp3 */; };
 		84A490851B901A0700244465 /* vg_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A490841B901A0700244465 /* vg_close.png */; };
 		84A6B3A21B86CA8C00426D60 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3A11B86CA8C00426D60 /* AdSupport.framework */; };
@@ -112,6 +111,7 @@
 		84A6B3CC1B86CB3D00426D60 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3CA1B86CB3D00426D60 /* CoreMedia.framework */; };
 		84A6B3CF1B86CB4400426D60 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3CD1B86CB4400426D60 /* EventKit.framework */; };
 		84A6B3D01B86CB4400426D60 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3CE1B86CB4400426D60 /* EventKitUI.framework */; };
+		96FF7B3D1D06C67700031F31 /* RevMobAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96FF7B3C1D06C67700031F31 /* RevMobAds.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -212,7 +212,6 @@
 		1B00B8471CD8589D008C1A76 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		1B00B8491CD858C6008C1A76 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		1B00B84A1CD858C6008C1A76 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/PrivateFrameworks/WebKit.framework; sourceTree = SDKROOT; };
-		1B00B84D1CD8FD64008C1A76 /* RevMobAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RevMobAds.framework; sourceTree = "<group>"; };
 		843883CA1B89AFF000EBCDC1 /* 3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 3.mp3; sourceTree = "<group>"; };
 		84A490841B901A0700244465 /* vg_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vg_close.png; sourceTree = "<group>"; };
 		84A6B3A11B86CA8C00426D60 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -236,6 +235,7 @@
 		84A6B3CA1B86CB3D00426D60 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		84A6B3CD1B86CB4400426D60 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		84A6B3CE1B86CB4400426D60 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		96FF7B3C1D06C67700031F31 /* RevMobAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RevMobAds.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,7 +247,6 @@
 				1B00B84C1CD858C6008C1A76 /* WebKit.framework in Frameworks */,
 				84A6B3C41B86CB1F00426D60 /* CFNetwork.framework in Frameworks */,
 				84A6B3CF1B86CB4400426D60 /* EventKit.framework in Frameworks */,
-				1B00B84E1CD8FD64008C1A76 /* RevMobAds.framework in Frameworks */,
 				84A6B3D01B86CB4400426D60 /* EventKitUI.framework in Frameworks */,
 				84A6B3AE1B86CAC200426D60 /* Foundation.framework in Frameworks */,
 				84A6B3BC1B86CB0700426D60 /* MediaPlayer.framework in Frameworks */,
@@ -263,6 +262,7 @@
 				84A6B3C11B86CB1700426D60 /* CoreAudio.framework in Frameworks */,
 				84A6B3B21B86CAD100426D60 /* CoreGraphics.framework in Frameworks */,
 				84A6B3C21B86CB1700426D60 /* CoreLocation.framework in Frameworks */,
+				96FF7B3D1D06C67700031F31 /* RevMobAds.framework in Frameworks */,
 				84A6B3CC1B86CB3D00426D60 /* CoreMedia.framework in Frameworks */,
 				84A6B3BE1B86CB0D00426D60 /* CoreTelephony.framework in Frameworks */,
 				1B00B81E1CD8574B008C1A76 /* AdColony.framework in Frameworks */,
@@ -296,7 +296,7 @@
 		1103F46D1A82472600B7B604 = {
 			isa = PBXGroup;
 			children = (
-				1B00B84D1CD8FD64008C1A76 /* RevMobAds.framework */,
+				96FF7B3C1D06C67700031F31 /* RevMobAds.framework */,
 				1B00B8491CD858C6008C1A76 /* StoreKit.framework */,
 				1B00B84A1CD858C6008C1A76 /* WebKit.framework */,
 				1B00B8471CD8589D008C1A76 /* libsqlite3.0.tbd */,

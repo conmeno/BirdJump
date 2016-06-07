@@ -14,11 +14,11 @@ class Utility {
     static var isAd2 = false//Admob Banner
     static var isAd3 = true//Amazon
     static var isAd4 = false//Adcolony
-   
+    
     static var isAd5 = false// ==>UnityAds
     static var isAd6 = true//revmob
     
-    static var isAd7 = false //vungle
+    static var isAd7 = false //vungle/heyzap
     static var isAd8 = false //Sonic
     
     
@@ -36,6 +36,7 @@ class Utility {
     static var VungleID = ""
     static var UnityGameID = ""
     static var SonicID = ""
+    //static var HeyzapID = ""
     static var isStopAdmobAD = false
     
     static var CheckVPN = true
@@ -60,7 +61,7 @@ class Utility {
         
         GBannerAdUnit = data.gBanner
         GFullAdUnit = data.gFull
-      
+        
         Amazonkey = data.AmazonKey
         
         AdcolonyAppID = data.AdcolonyAppID
@@ -70,7 +71,7 @@ class Utility {
         VungleID = data.VungleID
         UnityGameID = data.UnityGameId
         SonicID = data.SonicID
- 
+        //HeyzapID = data.HeyzapID
         
         
         if(NSUserDefaults.standardUserDefaults().objectForKey("adOnline") != nil)
@@ -147,10 +148,10 @@ class Utility {
                 isAd8 = NSUserDefaults.standardUserDefaults().objectForKey("ad8") as! Bool
                 
             }
-        
+            
         }else
         {
-        
+            
             //ad1 admob full
             if(NSUserDefaults.standardUserDefaults().objectForKey("online-ad1") != nil)
             {
@@ -210,7 +211,7 @@ class Utility {
         }
         
         
-
+        
         
         
         if(NSUserDefaults.standardUserDefaults().objectForKey("check-VPN") != nil)
@@ -226,14 +227,14 @@ class Utility {
         
         SetupAdOnline()
         
-//        if(Utility.isCDMA())
-//        {
-//            showOtherAd = true
-//        }
+        //        if(Utility.isCDMA())
+        //        {
+        //            showOtherAd = true
+        //        }
         
         
     }
-
+    
     
     static func SetupAdOnline()
     {
@@ -250,7 +251,7 @@ class Utility {
             GFullAdUnit = NSUserDefaults.standardUserDefaults().objectForKey("gFullOnline") as! String
         }
         
-              //get edited appid & sign from Adcolony
+        //get edited appid & sign from Adcolony
         
         if(NSUserDefaults.standardUserDefaults().objectForKey("adcolonyAppID") != nil)
         {
@@ -264,7 +265,7 @@ class Utility {
             
         }
         
-               
+        
         //get amazon online id
         if(NSUserDefaults.standardUserDefaults().objectForKey("amazon") != nil)
         {
@@ -301,19 +302,27 @@ class Utility {
             
         }
         
-//        //get CDMA status
-//        if(NSUserDefaults.standardUserDefaults().objectForKey("show-other-ad-online") != nil)
+        //heyzap id
+//        if(NSUserDefaults.standardUserDefaults().objectForKey("heyzapid") != nil)
 //        {
-//            let tempCDMA = NSUserDefaults.standardUserDefaults().objectForKey("show-other-ad-online") as! String
-//            if(tempCDMA == "true")
-//            {
-//                showOtherAd = true
-//            }else
-//            {
-//                showOtherAd = false
-//            }
+//            HeyzapID = NSUserDefaults.standardUserDefaults().objectForKey("heyzapid") as! String
 //            
 //        }
+        
+        
+        //        //get CDMA status
+        //        if(NSUserDefaults.standardUserDefaults().objectForKey("show-other-ad-online") != nil)
+        //        {
+        //            let tempCDMA = NSUserDefaults.standardUserDefaults().objectForKey("show-other-ad-online") as! String
+        //            if(tempCDMA == "true")
+        //            {
+        //                showOtherAd = true
+        //            }else
+        //            {
+        //                showOtherAd = false
+        //            }
+        //
+        //        }
         
         
     }
@@ -330,19 +339,17 @@ class Utility {
         return false
     }
     
- 
+    
     
     static func setupRevmob()
     {
         
         let completionBlock: () -> Void = {
-            RevMobAds.session().showFullscreen()
-        
-            
-            self.RevmobFull()
-            self.RevmobVideo()
-            //RevmobPopup()
             self.RevmobBanner()
+            self.RevmobFull()
+            //self.RevmobVideo()
+            //RevmobPopup()
+            
         }
         let errorBlock: (NSError!) -> Void = {error in
             // check the error
@@ -377,19 +384,19 @@ class Utility {
         RevMobAds.session()?.fullscreen().showVideo()
     }
     
-//    static func CanShowAd()->Bool
-//    {
-//        let abc = cclass()
-//        let VPN = abc.isVPNConnected()
-//        let Version = abc.platformNiceString()
-//        if(VPN == false && Version == "CDMA")
-//        {
-//            return false
-//        }
-//        
-//        
-//        return true
-//    }
+    //    static func CanShowAd()->Bool
+    //    {
+    //        let abc = cclass()
+    //        let VPN = abc.isVPNConnected()
+    //        let Version = abc.platformNiceString()
+    //        if(VPN == false && Version == "CDMA")
+    //        {
+    //            return false
+    //        }
+    //
+    //
+    //        return true
+    //    }
     
     
     
