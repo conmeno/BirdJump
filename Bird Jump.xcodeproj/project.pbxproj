@@ -62,22 +62,6 @@
 		1103F4FC1A8259E100B7B604 /* Level01.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1103F4FB1A8259E100B7B604 /* Level01.plist */; };
 		1103F4FE1A82618C00B7B604 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1103F4FD1A82618C00B7B604 /* GameState.swift */; };
 		1103F5001A82686D00B7B604 /* EndGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1103F4FF1A82686D00B7B604 /* EndGameScene.swift */; };
-		1B00B81E1CD8574B008C1A76 /* AdColony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B00B8121CD8574B008C1A76 /* AdColony.framework */; };
-		1B00B81F1CD8574B008C1A76 /* AmazonAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B00B8131CD8574B008C1A76 /* AmazonAd.framework */; };
-		1B00B8211CD8574B008C1A76 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B00B8151CD8574B008C1A76 /* GoogleMobileAds.framework */; };
-		1B00B8251CD8574B008C1A76 /* Supersonic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B00B8191CD8574B008C1A76 /* Supersonic.framework */; };
-		1B00B8261CD8574B008C1A76 /* UnityAds.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1B00B81A1CD8574B008C1A76 /* UnityAds.bundle */; };
-		1B00B8271CD8574B008C1A76 /* UnityAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B00B81B1CD8574B008C1A76 /* UnityAds.framework */; };
-		1B00B8281CD8574B008C1A76 /* VungleSDK.embeddedframework in Resources */ = {isa = PBXBuildFile; fileRef = 1B00B81C1CD8574B008C1A76 /* VungleSDK.embeddedframework */; };
-		1B00B8291CD8574B008C1A76 /* VungleSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B00B81D1CD8574B008C1A76 /* VungleSDK.framework */; };
-		1B00B8351CD8579B008C1A76 /* AdManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B00B82B1CD8579B008C1A76 /* AdManagerView.swift */; };
-		1B00B8361CD8579B008C1A76 /* ADXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B00B82C1CD8579B008C1A76 /* ADXML.swift */; };
-		1B00B8371CD8579B008C1A76 /* cclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B00B82F1CD8579B008C1A76 /* cclass.m */; };
-		1B00B8381CD8579B008C1A76 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B00B8301CD8579B008C1A76 /* Data.swift */; };
-		1B00B8391CD8579B008C1A76 /* ISDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B00B8311CD8579B008C1A76 /* ISDelegate.swift */; };
-		1B00B83A1CD8579B008C1A76 /* MyAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B00B8321CD8579B008C1A76 /* MyAd.swift */; };
-		1B00B83B1CD8579B008C1A76 /* StoryboardAD.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B00B8331CD8579B008C1A76 /* StoryboardAD.storyboard */; };
-		1B00B83C1CD8579B008C1A76 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B00B8341CD8579B008C1A76 /* Utility.swift */; };
 		1B00B8401CD8588A008C1A76 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B00B83D1CD8588A008C1A76 /* CoreFoundation.framework */; };
 		1B00B8411CD8588A008C1A76 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B00B83E1CD8588A008C1A76 /* CoreImage.framework */; };
 		1B00B8421CD8588A008C1A76 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B00B83F1CD8588A008C1A76 /* MobileCoreServices.framework */; };
@@ -85,7 +69,6 @@
 		1B00B8461CD85896008C1A76 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B00B8441CD85895008C1A76 /* libz.tbd */; };
 		1B00B8481CD8589D008C1A76 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B00B8471CD8589D008C1A76 /* libsqlite3.0.tbd */; };
 		1B00B84B1CD858C6008C1A76 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B00B8491CD858C6008C1A76 /* StoreKit.framework */; };
-		1B00B84C1CD858C6008C1A76 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B00B84A1CD858C6008C1A76 /* WebKit.framework */; };
 		843883CE1B89AFF100EBCDC1 /* 3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 843883CA1B89AFF000EBCDC1 /* 3.mp3 */; };
 		84A490851B901A0700244465 /* vg_close.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A490841B901A0700244465 /* vg_close.png */; };
 		84A6B3A21B86CA8C00426D60 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3A11B86CA8C00426D60 /* AdSupport.framework */; };
@@ -109,7 +92,20 @@
 		84A6B3CC1B86CB3D00426D60 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3CA1B86CB3D00426D60 /* CoreMedia.framework */; };
 		84A6B3CF1B86CB4400426D60 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3CD1B86CB4400426D60 /* EventKit.framework */; };
 		84A6B3D01B86CB4400426D60 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84A6B3CE1B86CB4400426D60 /* EventKitUI.framework */; };
-		96584C3C1CFC00820008F44C /* RevMobAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96584C3B1CFC00820008F44C /* RevMobAds.framework */; };
+		96354A381F00177C00CEA6F6 /* AdColony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96354A331F00177C00CEA6F6 /* AdColony.framework */; };
+		96354A391F00177C00CEA6F6 /* AmazonAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96354A341F00177C00CEA6F6 /* AmazonAd.framework */; };
+		96354A3A1F00177C00CEA6F6 /* Chartboost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96354A351F00177C00CEA6F6 /* Chartboost.framework */; };
+		96354A3B1F00177C00CEA6F6 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96354A361F00177C00CEA6F6 /* GoogleMobileAds.framework */; };
+		96354A3C1F00177C00CEA6F6 /* RevMobAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96354A371F00177C00CEA6F6 /* RevMobAds.framework */; };
+		96354A471F0017BC00CEA6F6 /* AdManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96354A3E1F0017BC00CEA6F6 /* AdManagerView.swift */; };
+		96354A481F0017BC00CEA6F6 /* ADXML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96354A3F1F0017BC00CEA6F6 /* ADXML.swift */; };
+		96354A491F0017BC00CEA6F6 /* cclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 96354A421F0017BC00CEA6F6 /* cclass.m */; };
+		96354A4A1F0017BC00CEA6F6 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96354A431F0017BC00CEA6F6 /* Data.swift */; };
+		96354A4B1F0017BC00CEA6F6 /* MyAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96354A441F0017BC00CEA6F6 /* MyAd.swift */; };
+		96354A4C1F0017BC00CEA6F6 /* StoryboardAD.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96354A451F0017BC00CEA6F6 /* StoryboardAD.storyboard */; };
+		96354A4D1F0017BC00CEA6F6 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96354A461F0017BC00CEA6F6 /* Utility.swift */; };
+		96354A4F1F0017CD00CEA6F6 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96354A4E1F0017CD00CEA6F6 /* JavaScriptCore.framework */; };
+		96354A511F0017D300CEA6F6 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96354A501F0017D300CEA6F6 /* SafariServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -182,24 +178,6 @@
 		1103F4FB1A8259E100B7B604 /* Level01.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Level01.plist; sourceTree = "<group>"; };
 		1103F4FD1A82618C00B7B604 /* GameState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		1103F4FF1A82686D00B7B604 /* EndGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndGameScene.swift; sourceTree = "<group>"; };
-		1B00B8121CD8574B008C1A76 /* AdColony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdColony.framework; sourceTree = "<group>"; };
-		1B00B8131CD8574B008C1A76 /* AmazonAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AmazonAd.framework; sourceTree = "<group>"; };
-		1B00B8151CD8574B008C1A76 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
-		1B00B8191CD8574B008C1A76 /* Supersonic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Supersonic.framework; sourceTree = "<group>"; };
-		1B00B81A1CD8574B008C1A76 /* UnityAds.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = UnityAds.bundle; sourceTree = "<group>"; };
-		1B00B81B1CD8574B008C1A76 /* UnityAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UnityAds.framework; sourceTree = "<group>"; };
-		1B00B81C1CD8574B008C1A76 /* VungleSDK.embeddedframework */ = {isa = PBXFileReference; lastKnownFileType = folder; path = VungleSDK.embeddedframework; sourceTree = "<group>"; };
-		1B00B81D1CD8574B008C1A76 /* VungleSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VungleSDK.framework; sourceTree = "<group>"; };
-		1B00B82B1CD8579B008C1A76 /* AdManagerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdManagerView.swift; path = AdManager/AdManagerView.swift; sourceTree = "<group>"; };
-		1B00B82C1CD8579B008C1A76 /* ADXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ADXML.swift; path = AdManager/ADXML.swift; sourceTree = "<group>"; };
-		1B00B82D1CD8579B008C1A76 /* Bridging-header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Bridging-header.h"; path = "AdManager/Bridging-header.h"; sourceTree = "<group>"; };
-		1B00B82E1CD8579B008C1A76 /* cclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cclass.h; path = AdManager/cclass.h; sourceTree = "<group>"; };
-		1B00B82F1CD8579B008C1A76 /* cclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = cclass.m; path = AdManager/cclass.m; sourceTree = "<group>"; };
-		1B00B8301CD8579B008C1A76 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Data.swift; path = AdManager/Data.swift; sourceTree = "<group>"; };
-		1B00B8311CD8579B008C1A76 /* ISDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ISDelegate.swift; path = AdManager/ISDelegate.swift; sourceTree = "<group>"; };
-		1B00B8321CD8579B008C1A76 /* MyAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyAd.swift; path = AdManager/MyAd.swift; sourceTree = "<group>"; };
-		1B00B8331CD8579B008C1A76 /* StoryboardAD.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = StoryboardAD.storyboard; path = AdManager/StoryboardAD.storyboard; sourceTree = "<group>"; };
-		1B00B8341CD8579B008C1A76 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utility.swift; path = AdManager/Utility.swift; sourceTree = "<group>"; };
 		1B00B83D1CD8588A008C1A76 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		1B00B83E1CD8588A008C1A76 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		1B00B83F1CD8588A008C1A76 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -207,7 +185,6 @@
 		1B00B8441CD85895008C1A76 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		1B00B8471CD8589D008C1A76 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		1B00B8491CD858C6008C1A76 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		1B00B84A1CD858C6008C1A76 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/PrivateFrameworks/WebKit.framework; sourceTree = SDKROOT; };
 		843883CA1B89AFF000EBCDC1 /* 3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 3.mp3; sourceTree = "<group>"; };
 		84A490841B901A0700244465 /* vg_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vg_close.png; sourceTree = "<group>"; };
 		84A6B3A11B86CA8C00426D60 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -231,7 +208,22 @@
 		84A6B3CA1B86CB3D00426D60 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		84A6B3CD1B86CB4400426D60 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		84A6B3CE1B86CB4400426D60 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
-		96584C3B1CFC00820008F44C /* RevMobAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RevMobAds.framework; sourceTree = "<group>"; };
+		96354A331F00177C00CEA6F6 /* AdColony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdColony.framework; sourceTree = "<group>"; };
+		96354A341F00177C00CEA6F6 /* AmazonAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AmazonAd.framework; sourceTree = "<group>"; };
+		96354A351F00177C00CEA6F6 /* Chartboost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Chartboost.framework; sourceTree = "<group>"; };
+		96354A361F00177C00CEA6F6 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		96354A371F00177C00CEA6F6 /* RevMobAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RevMobAds.framework; sourceTree = "<group>"; };
+		96354A3E1F0017BC00CEA6F6 /* AdManagerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdManagerView.swift; path = AdManager/AdManagerView.swift; sourceTree = "<group>"; };
+		96354A3F1F0017BC00CEA6F6 /* ADXML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ADXML.swift; path = AdManager/ADXML.swift; sourceTree = "<group>"; };
+		96354A401F0017BC00CEA6F6 /* Bridging-header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Bridging-header.h"; path = "AdManager/Bridging-header.h"; sourceTree = "<group>"; };
+		96354A411F0017BC00CEA6F6 /* cclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cclass.h; path = AdManager/cclass.h; sourceTree = "<group>"; };
+		96354A421F0017BC00CEA6F6 /* cclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = cclass.m; path = AdManager/cclass.m; sourceTree = "<group>"; };
+		96354A431F0017BC00CEA6F6 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Data.swift; path = AdManager/Data.swift; sourceTree = "<group>"; };
+		96354A441F0017BC00CEA6F6 /* MyAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyAd.swift; path = AdManager/MyAd.swift; sourceTree = "<group>"; };
+		96354A451F0017BC00CEA6F6 /* StoryboardAD.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = StoryboardAD.storyboard; path = AdManager/StoryboardAD.storyboard; sourceTree = "<group>"; };
+		96354A461F0017BC00CEA6F6 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utility.swift; path = AdManager/Utility.swift; sourceTree = "<group>"; };
+		96354A4E1F0017CD00CEA6F6 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		96354A501F0017D300CEA6F6 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,18 +231,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96354A511F0017D300CEA6F6 /* SafariServices.framework in Frameworks */,
+				96354A4F1F0017CD00CEA6F6 /* JavaScriptCore.framework in Frameworks */,
 				1B00B84B1CD858C6008C1A76 /* StoreKit.framework in Frameworks */,
-				1B00B84C1CD858C6008C1A76 /* WebKit.framework in Frameworks */,
 				84A6B3C41B86CB1F00426D60 /* CFNetwork.framework in Frameworks */,
+				96354A3B1F00177C00CEA6F6 /* GoogleMobileAds.framework in Frameworks */,
 				84A6B3CF1B86CB4400426D60 /* EventKit.framework in Frameworks */,
 				84A6B3D01B86CB4400426D60 /* EventKitUI.framework in Frameworks */,
 				84A6B3AE1B86CAC200426D60 /* Foundation.framework in Frameworks */,
+				96354A3A1F00177C00CEA6F6 /* Chartboost.framework in Frameworks */,
 				84A6B3BC1B86CB0700426D60 /* MediaPlayer.framework in Frameworks */,
+				96354A3C1F00177C00CEA6F6 /* RevMobAds.framework in Frameworks */,
 				84A6B3BA1B86CAFF00426D60 /* MessageUI.framework in Frameworks */,
 				84A6B3B81B86CAFA00426D60 /* QuartzCore.framework in Frameworks */,
 				84A6B3B01B86CACB00426D60 /* UIKit.framework in Frameworks */,
 				1B00B8481CD8589D008C1A76 /* libsqlite3.0.tbd in Frameworks */,
 				1B00B8451CD85896008C1A76 /* libz.1.2.5.tbd in Frameworks */,
+				96354A391F00177C00CEA6F6 /* AmazonAd.framework in Frameworks */,
 				1B00B8461CD85896008C1A76 /* libz.tbd in Frameworks */,
 				1B00B8401CD8588A008C1A76 /* CoreFoundation.framework in Frameworks */,
 				1B00B8411CD8588A008C1A76 /* CoreImage.framework in Frameworks */,
@@ -258,21 +255,15 @@
 				84A6B3C11B86CB1700426D60 /* CoreAudio.framework in Frameworks */,
 				84A6B3B21B86CAD100426D60 /* CoreGraphics.framework in Frameworks */,
 				84A6B3C21B86CB1700426D60 /* CoreLocation.framework in Frameworks */,
-				96584C3C1CFC00820008F44C /* RevMobAds.framework in Frameworks */,
 				84A6B3CC1B86CB3D00426D60 /* CoreMedia.framework in Frameworks */,
 				84A6B3BE1B86CB0D00426D60 /* CoreTelephony.framework in Frameworks */,
-				1B00B81E1CD8574B008C1A76 /* AdColony.framework in Frameworks */,
-				1B00B81F1CD8574B008C1A76 /* AmazonAd.framework in Frameworks */,
 				84A6B3CB1B86CB3D00426D60 /* CoreData.framework in Frameworks */,
 				84A6B3C81B86CB3400426D60 /* AudioToolbox.framework in Frameworks */,
 				84A6B3C61B86CB2500426D60 /* AVFoundation.framework in Frameworks */,
-				1B00B8291CD8574B008C1A76 /* VungleSDK.framework in Frameworks */,
 				84A6B3B61B86CAF500426D60 /* Security.framework in Frameworks */,
 				84A6B3B41B86CAF100426D60 /* SystemConfiguration.framework in Frameworks */,
-				1B00B8271CD8574B008C1A76 /* UnityAds.framework in Frameworks */,
-				1B00B8251CD8574B008C1A76 /* Supersonic.framework in Frameworks */,
+				96354A381F00177C00CEA6F6 /* AdColony.framework in Frameworks */,
 				84A6B3A81B86CAA100426D60 /* Social.framework in Frameworks */,
-				1B00B8211CD8574B008C1A76 /* GoogleMobileAds.framework in Frameworks */,
 				84A6B3A41B86CA9600426D60 /* WebKit.framework in Frameworks */,
 				84A6B3A21B86CA8C00426D60 /* AdSupport.framework in Frameworks */,
 			);
@@ -291,23 +282,20 @@
 		1103F46D1A82472600B7B604 = {
 			isa = PBXGroup;
 			children = (
-				96584C3B1CFC00820008F44C /* RevMobAds.framework */,
+				96354A501F0017D300CEA6F6 /* SafariServices.framework */,
+				96354A4E1F0017CD00CEA6F6 /* JavaScriptCore.framework */,
+				96354A331F00177C00CEA6F6 /* AdColony.framework */,
+				96354A341F00177C00CEA6F6 /* AmazonAd.framework */,
+				96354A351F00177C00CEA6F6 /* Chartboost.framework */,
+				96354A361F00177C00CEA6F6 /* GoogleMobileAds.framework */,
+				96354A371F00177C00CEA6F6 /* RevMobAds.framework */,
 				1B00B8491CD858C6008C1A76 /* StoreKit.framework */,
-				1B00B84A1CD858C6008C1A76 /* WebKit.framework */,
 				1B00B8471CD8589D008C1A76 /* libsqlite3.0.tbd */,
 				1B00B8431CD85895008C1A76 /* libz.1.2.5.tbd */,
 				1B00B8441CD85895008C1A76 /* libz.tbd */,
 				1B00B83D1CD8588A008C1A76 /* CoreFoundation.framework */,
 				1B00B83E1CD8588A008C1A76 /* CoreImage.framework */,
 				1B00B83F1CD8588A008C1A76 /* MobileCoreServices.framework */,
-				1B00B8121CD8574B008C1A76 /* AdColony.framework */,
-				1B00B8131CD8574B008C1A76 /* AmazonAd.framework */,
-				1B00B8151CD8574B008C1A76 /* GoogleMobileAds.framework */,
-				1B00B8191CD8574B008C1A76 /* Supersonic.framework */,
-				1B00B81A1CD8574B008C1A76 /* UnityAds.bundle */,
-				1B00B81B1CD8574B008C1A76 /* UnityAds.framework */,
-				1B00B81C1CD8574B008C1A76 /* VungleSDK.embeddedframework */,
-				1B00B81D1CD8574B008C1A76 /* VungleSDK.framework */,
 				84A490841B901A0700244465 /* vg_close.png */,
 				84A6B3CD1B86CB4400426D60 /* EventKit.framework */,
 				84A6B3CE1B86CB4400426D60 /* EventKitUI.framework */,
@@ -348,7 +336,7 @@
 		1103F4781A82472600B7B604 /* UberJump */ = {
 			isa = PBXGroup;
 			children = (
-				1B00B82A1CD8577A008C1A76 /* Ad */,
+				96354A3D1F0017A500CEA6F6 /* Ad */,
 				1103F47B1A82472600B7B604 /* AppDelegate.swift */,
 				1103F47F1A82472600B7B604 /* GameScene.swift */,
 				1103F4FD1A82618C00B7B604 /* GameState.swift */,
@@ -450,19 +438,18 @@
 			path = Backgrounds;
 			sourceTree = "<group>";
 		};
-		1B00B82A1CD8577A008C1A76 /* Ad */ = {
+		96354A3D1F0017A500CEA6F6 /* Ad */ = {
 			isa = PBXGroup;
 			children = (
-				1B00B82B1CD8579B008C1A76 /* AdManagerView.swift */,
-				1B00B82C1CD8579B008C1A76 /* ADXML.swift */,
-				1B00B82D1CD8579B008C1A76 /* Bridging-header.h */,
-				1B00B82E1CD8579B008C1A76 /* cclass.h */,
-				1B00B82F1CD8579B008C1A76 /* cclass.m */,
-				1B00B8301CD8579B008C1A76 /* Data.swift */,
-				1B00B8311CD8579B008C1A76 /* ISDelegate.swift */,
-				1B00B8321CD8579B008C1A76 /* MyAd.swift */,
-				1B00B8331CD8579B008C1A76 /* StoryboardAD.storyboard */,
-				1B00B8341CD8579B008C1A76 /* Utility.swift */,
+				96354A3E1F0017BC00CEA6F6 /* AdManagerView.swift */,
+				96354A3F1F0017BC00CEA6F6 /* ADXML.swift */,
+				96354A401F0017BC00CEA6F6 /* Bridging-header.h */,
+				96354A411F0017BC00CEA6F6 /* cclass.h */,
+				96354A421F0017BC00CEA6F6 /* cclass.m */,
+				96354A431F0017BC00CEA6F6 /* Data.swift */,
+				96354A441F0017BC00CEA6F6 /* MyAd.swift */,
+				96354A451F0017BC00CEA6F6 /* StoryboardAD.storyboard */,
+				96354A461F0017BC00CEA6F6 /* Utility.swift */,
 			);
 			name = Ad;
 			sourceTree = "<group>";
@@ -573,7 +560,6 @@
 				1103F4E11A82484F00B7B604 /* Background10@2x.png in Resources */,
 				1103F4F41A82484F00B7B604 /* Background20.png in Resources */,
 				1103F4D61A82484F00B7B604 /* Background05.png in Resources */,
-				1B00B83B1CD8579B008C1A76 /* StoryboardAD.storyboard in Resources */,
 				1103F4DD1A82484F00B7B604 /* Background08@2x.png in Resources */,
 				1103F4DF1A82484F00B7B604 /* Background09@2x.png in Resources */,
 				1103F4CF1A82484F00B7B604 /* Background01@2x.png in Resources */,
@@ -598,12 +584,11 @@
 				1103F4CD1A82484F00B7B604 /* Background.png in Resources */,
 				1103F4D01A82484F00B7B604 /* Background02.png in Resources */,
 				1103F4E51A82484F00B7B604 /* Background12@2x.png in Resources */,
+				96354A4C1F0017BC00CEA6F6 /* StoryboardAD.storyboard in Resources */,
 				1103F4E91A82484F00B7B604 /* Background14@2x.png in Resources */,
 				1103F4EF1A82484F00B7B604 /* Background17@2x.png in Resources */,
-				1B00B8281CD8574B008C1A76 /* VungleSDK.embeddedframework in Resources */,
 				1103F4D31A82484F00B7B604 /* Background03@2x.png in Resources */,
 				1103F4CC1A82484F00B7B604 /* Assets.atlas in Resources */,
-				1B00B8261CD8574B008C1A76 /* UnityAds.bundle in Resources */,
 				1103F4E21A82484F00B7B604 /* Background11.png in Resources */,
 				1103F4EE1A82484F00B7B604 /* Background17.png in Resources */,
 				1103F4D21A82484F00B7B604 /* Background03.png in Resources */,
@@ -625,19 +610,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B00B8391CD8579B008C1A76 /* ISDelegate.swift in Sources */,
 				1103F4801A82472600B7B604 /* GameScene.swift in Sources */,
-				1B00B8381CD8579B008C1A76 /* Data.swift in Sources */,
-				1B00B8371CD8579B008C1A76 /* cclass.m in Sources */,
+				96354A4A1F0017BC00CEA6F6 /* Data.swift in Sources */,
+				96354A491F0017BC00CEA6F6 /* cclass.m in Sources */,
 				1103F4821A82472600B7B604 /* GameViewController.swift in Sources */,
 				1103F4FE1A82618C00B7B604 /* GameState.swift in Sources */,
 				1103F4F81A82515300B7B604 /* GameObjectNode.swift in Sources */,
-				1B00B83C1CD8579B008C1A76 /* Utility.swift in Sources */,
-				1B00B8361CD8579B008C1A76 /* ADXML.swift in Sources */,
-				1B00B83A1CD8579B008C1A76 /* MyAd.swift in Sources */,
+				96354A481F0017BC00CEA6F6 /* ADXML.swift in Sources */,
 				1103F5001A82686D00B7B604 /* EndGameScene.swift in Sources */,
-				1B00B8351CD8579B008C1A76 /* AdManagerView.swift in Sources */,
+				96354A4D1F0017BC00CEA6F6 /* Utility.swift in Sources */,
+				96354A471F0017BC00CEA6F6 /* AdManagerView.swift in Sources */,
 				1103F47C1A82472600B7B604 /* AppDelegate.swift in Sources */,
+				96354A4B1F0017BC00CEA6F6 /* MyAd.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
