@@ -505,7 +505,7 @@
 				TargetAttributes = {
 					1103F4751A82472600B7B604 = {
 						CreatedOnToolsVersion = 6.2;
-						DevelopmentTeam = 6SZC32EP3F;
+						DevelopmentTeam = 597LVZ4LQD;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 0;
@@ -758,7 +758,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "phuongnguyennew.Bird-Jump";
+				PRODUCT_BUNDLE_IDENTIFIER = "phuongntnew.Bird-Jump";
 				PRODUCT_NAME = "Bird Jump";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "UberJump/AdManager/Bridging-header.h";
@@ -782,7 +782,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = "phuongnguyennew.Bird-Jump";
+				PRODUCT_BUNDLE_IDENTIFIER = "phuongntnew.Bird-Jump";
 				PRODUCT_NAME = "Bird Jump";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "UberJump/AdManager/Bridging-header.h";
